@@ -1,0 +1,1303 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/13/2025 2:40:12 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MAOA-PC"
+  DTS:CreatorName="MAOA-PC\scrab"
+  DTS:DTSID="{FAB81FD2-BAD8-45A0-AD4A-959F043B8898}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{CD8CB283-30E3-4041-8FAD-6E689E9422B0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{92301FF5-73A0-4F9F-8649-6FD1605BAC3E}"
+      DTS:ObjectName="localhost.ChinookDW.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ChinookDW;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{92301FF5-73A0-4F9F-8649-6FD1605BAC3E}localhost.ChinookDW.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADl9F/GDMzwkhZMfpiRES7P6ch5b8fL6qDjPZhOsYa1hQAAAAAOgAAAAAIAACAAAAC2a9nt5ddd7ELrJxlU9KaBWcWLcqmI3Cr3IAh44ezZaSAAAABRE5WnlyfDjWknb0jRacZ3MCN5wSiiZyP68qPvLLTfgUAAAAAiJAk4hFeG+YBkPq4e7l1FFiz+q9zb82FHgt0dQR+q/BX5ETufLvoocCAXiKWJHRmD+dkOTOqpyFh7ab3gagYa</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E15A8233-66A9-4C41-85EA-FBC7F4BFC52A}"
+      DTS:ObjectName="localhost.Chinook_Staging.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=Chinook_Staging;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{E15A8233-66A9-4C41-85EA-FBC7F4BFC52A}localhost.Chinook_Staging.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADGOTC6GtL436SHsYQOC8Mz1CgnyNXbIQhWhwHXrJt6OQAAAAAOgAAAAAIAACAAAAC+UeHkXE54p2cCWhYrz/MqRM1PKrOipT94RQkIija29SAAAABcrtjCzGZQ4+2ayZ8zxKLp/yx2X3QPqwY6AW4pqzCekEAAAAC8wwG6zO0TSS1iQKITEDN72eQKMIR6uWa+d6jZYJijPPAnRFjU8qpUseoVbqZ3Crz7W6+GmJc8vGwT4Lr+iBSh</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT_DimAlbum"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{072A23F7-4B26-4B57-95EC-86F6FB16A3BA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_DimAlbum"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_DimArtist"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{076E5602-EABB-41C1-B1E7-8F112D120311}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_DimArtist"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_DimCustomer"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8E799509-75EF-4D95-A82A-ED937EF5EC19}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_DimCustomer"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_DimCustomer\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_DimCustomer\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\Derived Column.Inputs[Derived Column Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="Country"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\Derived Column.Inputs[Derived Column Input].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Email"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Email]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_DimCustomer\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Output].Columns[norm_email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="60"
+                      lineageId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Output].Columns[norm_email]"
+                      name="norm_email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_WSTR,60)[REPLACENULL](#{Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Email]},"NoEmail")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,60)REPLACENULL(Email,"NoEmail")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Output].Columns[norm_country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="40"
+                      lineageId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Output].Columns[norm_country]"
+                      name="norm_country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Country]} == "USA" ? "United States" : #{Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Country]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Country == "USA" ? "United States" : Country</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_DimCustomer\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimCustomer\DimCustomer"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DimCustomer"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimCustomer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimCustomer\DimCustomer.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[CustomerId]"
+                      cachedDataType="i4"
+                      cachedName="CustomerId"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[CustomerId]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="70"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[Phone]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Phone"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Phone]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[Fax]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Fax"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Fax]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Fax]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[SupportRepId]"
+                      cachedDataType="i4"
+                      cachedName="SupportRepId"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[SupportRepId]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[SupportRepId]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[norm_email]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="norm_email"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
+                      lineageId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Output].Columns[norm_email]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].Columns[norm_country]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="norm_country"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Output].Columns[norm_country]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[CustomerKey]"
+                      dataType="i4"
+                      name="CustomerKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
+                      dataType="i4"
+                      name="CustomerId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="40"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="40"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
+                      dataType="wstr"
+                      length="80"
+                      name="Company" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="70"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="40"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="40"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="40"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="60"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input].ExternalColumns[SupportRepId]"
+                      dataType="i4"
+                      name="SupportRepId" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimCustomer\DimCustomer.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCustomer\DimCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\DimCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCustomer\DimCustomer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimCustomer\Stage_Customer"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Stage_Customer"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_Customer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimCustomer\Stage_Customer.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[CustomerId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[CustomerId]"
+                      name="CustomerId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      length="40"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      length="20"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Company]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Company]"
+                      length="80"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Company]"
+                      name="Company"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      length="70"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Address]"
+                      name="Address"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="40"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[State]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      length="40"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[State]"
+                      name="State"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="40"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      length="10"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      length="24"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Phone]"
+                      name="Phone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Fax]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      length="24"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Fax]"
+                      name="Fax"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Email]"
+                      length="60"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[Email]"
+                      name="Email"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[SupportRepId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[SupportRepId]"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].Columns[SupportRepId]"
+                      name="SupportRepId"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
+                      dataType="i4"
+                      name="CustomerId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="40"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="20"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Company]"
+                      dataType="wstr"
+                      length="80"
+                      name="Company" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="70"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="40"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="40"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="40"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="60"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output].ExternalColumns[SupportRepId]"
+                      dataType="i4"
+                      name="SupportRepId" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
+                      name="CustomerId" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Company]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Company]"
+                      name="Company" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      dataType="wstr"
+                      length="70"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      name="Address" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[City]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[State]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[State]"
+                      name="State" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      name="Phone" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      name="Fax" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Email]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[Email]"
+                      name="Email" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[SupportRepId]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[SupportRepId]"
+                      name="SupportRepId" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_DimCustomer.Paths[Derived Column Output]"
+              endId="Package\DFT_DimCustomer\DimCustomer.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT_DimCustomer\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_DimCustomer.Paths[OLE DB Source Output]"
+              endId="Package\DFT_DimCustomer\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_DimCustomer\Stage_Customer.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_DimDate"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7554AF79-1AB4-4E80-A21D-CC8632019432}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_DimDate"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_DimGenre"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{788D4033-F204-4D6E-93A1-E1D4C16A503E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_DimGenre"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_DimMediaType"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D966858C-1E46-47A7-BCBC-E66AC3A61C88}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_DimMediaType"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_DimTrack"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{01333943-DD5F-4D37-A71C-031B2CE00918}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_DimTrack"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_FactSales"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{21F47173-16F7-4089-8A2A-E4B0C7A5A043}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_FactSales"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{78297DD6-D3D0-4C70-9FB5-1958C1DB1671}"
+      DTS:From="Package\DFT_DimCustomer"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT_DimArtist" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{451BDE71-CA8B-4822-B618-AF26D60293A1}"
+      DTS:From="Package\DFT_DimArtist"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DFT_DimAlbum" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{69FDBEEA-65B5-459F-8A78-1C9607359209}"
+      DTS:From="Package\DFT_DimAlbum"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DFT_DimGenre" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{DF9959BE-818C-4761-9766-4E1320D95563}"
+      DTS:From="Package\DFT_DimGenre"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\DFT_DimMediaType" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{CA847226-B147-4066-BC8B-039E7718A3A9}"
+      DTS:From="Package\DFT_DimMediaType"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\DFT_DimTrack" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{BE30991E-8122-40B7-B67D-50ED6478AC82}"
+      DTS:From="Package\DFT_DimTrack"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\DFT_DimDate" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{72482421-C0FD-45AC-9359-E244358D6C7B}"
+      DTS:From="Package\DFT_DimDate"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\DFT_FactSales" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\DFT_DimCustomer"
+          TopLeft="55.8333302827347,23.3999998372793" />
+        <NodeLayout
+          Size="146.4,41.6"
+          Id="Package\DFT_DimArtist"
+          TopLeft="274.999984974663,21.6666665159994" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DFT_DimAlbum"
+          TopLeft="474.166640759343,16.4666665521595" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\DFT_DimGenre"
+          TopLeft="697.499961890282,21.6666665159994" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\DFT_DimMediaType"
+          TopLeft="53.3333304193286,184.599998716315" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\DFT_DimTrack"
+          TopLeft="274.999984974663,181.999998734395" />
+        <NodeLayout
+          Size="144.8,41.6"
+          Id="Package\DFT_DimDate"
+          TopLeft="482.499973637363,180.266665413115" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\DFT_FactSales"
+          TopLeft="703.333294904896,179.399998752475" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="223.833330282735,43.3333331766393">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="51.1666546919285,0"
+              Start="0,0"
+              End="43.6666546919285,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="43.6666546919285,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="421.399984974663,39.8666665340794">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.7666557846802,0"
+              Start="0,0"
+              End="45.2666557846802,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="45.2666557846802,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="626.966640759343,39.8666665340795">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="70.5333211309385,0"
+              Start="0,0"
+              End="63.0333211309385,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="63.0333211309385,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="773.499961890282,63.2666665159994">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-632.966631470953,121.333332200315"
+              Start="0,0"
+              End="-632.966631470953,113.833332200315">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.6666661001576" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.6666661001576"
+                    Point2="0,60.6666661001576"
+                    Point3="-4,60.6666661001576" />
+                  <mssgle:LineSegment
+                    End="-628.966631470953,60.6666661001576" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-628.966631470953,60.6666661001576"
+                    Point2="-632.966631470953,60.6666661001576"
+                    Point3="-632.966631470953,64.6666661001576" />
+                  <mssgle:LineSegment
+                    End="-632.966631470953,113.833332200315" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="227.733330419329,204.099998725355">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.2666545553343,0"
+              Start="0,0"
+              End="39.7666545553343,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="39.7666545553343,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="423.799984974663,201.933332073755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.6999886627006,0"
+              Start="0,0"
+              End="51.1999886627006,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.1999886627006,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="627.299973637364,200.633332082795">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.0333212675325,0"
+              Start="0,0"
+              End="68.5333212675325,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="68.5333212675325,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT_DimCustomer">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DFT_DimCustomer\Stage_Customer"
+          TopLeft="65.8333297363588,38.9999997287989" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\DFT_DimCustomer\DimCustomer"
+          TopLeft="323.33331566718,232.266665051513" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DFT_DimCustomer\Derived Column"
+          TopLeft="182.49999002864,145.599998987516" />
+        <EdgeLayout
+          Id="Package\DFT_DimCustomer.Paths[OLE DB Source Output]"
+          TopLeft="143.833329736359,80.5999997287988">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115.066660292281,64.999999258717"
+              Start="0,0"
+              End="115.066660292281,57.499999258717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.4999996293585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.4999996293585"
+                    Point2="0,32.4999996293585"
+                    Point3="4,32.4999996293585" />
+                  <mssgle:LineSegment
+                    End="111.066660292281,32.4999996293585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="111.066660292281,32.4999996293585"
+                    Point2="115.066660292281,32.4999996293585"
+                    Point3="115.066660292281,36.4999996293585" />
+                  <mssgle:LineSegment
+                    End="115.066660292281,57.499999258717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimCustomer.Paths[Derived Column Output]"
+          TopLeft="258.89999002864,187.199998987516">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="135.63332563854,45.0666660639975"
+              Start="0,0"
+              End="135.63332563854,37.5666660639975">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5333330319988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5333330319988"
+                    Point2="0,22.5333330319988"
+                    Point3="4,22.5333330319988" />
+                  <mssgle:LineSegment
+                    End="131.63332563854,22.5333330319988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="131.63332563854,22.5333330319988"
+                    Point2="135.63332563854,22.5333330319988"
+                    Point3="135.63332563854,26.5333330319988" />
+                  <mssgle:LineSegment
+                    End="135.63332563854,37.5666660639975" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimCustomer\Stage_Customer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimCustomer\DimCustomer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
