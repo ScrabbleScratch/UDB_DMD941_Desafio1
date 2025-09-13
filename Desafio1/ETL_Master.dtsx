@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{3FF50CF5-A6D1-407B-866A-40E2F85E5B95}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{E4B9980E-6CB6-4EF0-BAB1-1F05E1026997}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -30,7 +30,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>ETL_Chinook_DW.dtsx</PackageName>
+          <PackageName>ETL_Chinook_Transform.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -75,13 +75,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="197.6,41.6"
-          Id="Package\Execute Staging Package"
-          TopLeft="54.1666637071306,33.799999764959" />
-        <NodeLayout
           Size="179.2,41.6"
           Id="Package\Execute DW Package"
           TopLeft="61.6666632973487,142.999999005596" />
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Execute Staging Package"
+          TopLeft="54.1666637071306,33.799999764959" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="152.11666350224,75.399999764959">
