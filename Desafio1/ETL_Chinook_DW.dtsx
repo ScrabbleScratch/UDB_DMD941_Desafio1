@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{13369300-4C46-4D79-A753-D5B54339F7A8}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{3E77ED0E-8A0B-4A3A-859C-FD65F7940BBE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACCzb8q+FjhLoDcUpb8CxfhtFgO4fCmoAZ/frnWk966JgAAAAAOgAAAAAIAACAAAABZKueq6Rr5HFTQPsBanJ9uK3p55E8/2JEgkRQA/l4ebCAAAAA7wsBaNWeISDhnwJpvpgc4f1zc5VqlNSwI+B7EDUatZEAAAAA0uVDi4trW+RPFspBf3RLEjKRrDbpw6rylGVM/anBwFRzDLx+YYi36YQo5fUtgzqpVL4aDwDP5XvlySfLbA2dh</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB7swm9xaYkQcn++86uocKZGIP06KoLsi62OGQ5ppx9xgAAAAAOgAAAAAIAACAAAABtECqGa3m1KZwhjDJsadFRdXU59/jGGwHoa8XaYpaXOCAAAAA57BQbJaXG0IJBZW/6E4c4A3VABXGx47inOZL1mX/KB0AAAAAsIA8GpnpS2s+SyO3pQl2KKS9nMDq1v/RryXBMa8uyR0BMKNPpCLKBwgsu+pMrF+whGavrqqfntbF5YCPTOyNx</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADH4EHD7ujqyi6KUs4uEgEwYIb4+d8+EWwZa5LG63AmzwAAAAAOgAAAAAIAACAAAACe1yPdBS2ubotYO1xh1ybt1N3XJAKH0bLMVNlYDqT7sSAAAAChoW64Vb698fBz+SxiNxwg8lzPFFRvsBN+G1c/9dF7PUAAAAAgk0uxbgMflkikneRIqctGpl09gXJUBoHsYi8AXjdmfen3ggD4/X2sVU6bMDVCipJey240LaGZBbfiUa53pAcJ</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADtYqGx2E40IFwoklCWRRFj5dMK2n3OP4C1tOjpFpKH7gAAAAAOgAAAAAIAACAAAABQKBhq0Fjx7/K8Y4+qGtboODuIjw5YxzHmIZ3lsciz2iAAAAD3jcOKxYg48B0xcbfPshtMi1m3a6A+sFP56jrBze8HRUAAAAA3Y2/RYl/dp47UN7BZW4r/UqOb1uF5lIcZtYMt88FsR+0tnr5ZHWvFwm/MLoITgcERhlrb4OsSIY32bRoS3LLn</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2149,7 +2149,970 @@ where [refTable].[ArtistId] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1" />
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_DimTrack\DimTrack"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DimTrack"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimTrack]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimTrack\DimTrack.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].Columns[TrackId]"
+                      cachedDataType="i4"
+                      cachedName="TrackId"
+                      externalMetadataColumnId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[TrackId]" />
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].Columns[Composer]"
+                      cachedDataType="wstr"
+                      cachedLength="220"
+                      cachedName="Composer"
+                      externalMetadataColumnId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[Composer]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Composer]" />
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].Columns[Milliseconds]"
+                      cachedDataType="i4"
+                      cachedName="Milliseconds"
+                      externalMetadataColumnId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[Milliseconds]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Milliseconds]" />
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].Columns[Bytes]"
+                      cachedDataType="i4"
+                      cachedName="Bytes"
+                      externalMetadataColumnId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[Bytes]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Bytes]" />
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                      cachedDataType="numeric"
+                      cachedName="UnitPrice"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].Columns[AlbumKey]"
+                      cachedDataType="i4"
+                      cachedName="AlbumKey"
+                      externalMetadataColumnId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[AlbumKey]"
+                      lineageId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Match Output].Columns[AlbumKey]" />
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].Columns[GenreKey]"
+                      cachedDataType="i4"
+                      cachedName="GenreKey"
+                      externalMetadataColumnId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[GenreKey]"
+                      lineageId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Match Output].Columns[GenreKey]" />
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].Columns[MediaTypeKey]"
+                      cachedDataType="i4"
+                      cachedName="MediaTypeKey"
+                      externalMetadataColumnId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[MediaTypeKey]"
+                      lineageId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Match Output].Columns[MediaTypeKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[TrackKey]"
+                      dataType="i4"
+                      name="TrackKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      dataType="i4"
+                      name="TrackId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="200"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[AlbumKey]"
+                      dataType="i4"
+                      name="AlbumKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[GenreKey]"
+                      dataType="i4"
+                      name="GenreKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[MediaTypeKey]"
+                      dataType="i4"
+                      name="MediaTypeKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[Composer]"
+                      dataType="wstr"
+                      length="220"
+                      name="Composer" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[Milliseconds]"
+                      dataType="i4"
+                      name="Milliseconds" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[Bytes]"
+                      dataType="i4"
+                      name="Bytes" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      dataType="numeric"
+                      name="UnitPrice"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimTrack\DimTrack.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\DimTrack.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\DimTrack.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\DimTrack.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimTrack\Lookup Album"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Album"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimAlbum]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimAlbum]) [refTable]
+where [refTable].[AlbumId] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AlbumKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AlbumId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Title" dataType="DT_WSTR" length="160" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ArtistKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[AlbumId]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimTrack\Lookup Album.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimTrack\Lookup Album.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\Lookup Album.Inputs[Lookup Input].Columns[AlbumId]"
+                      cachedDataType="i4"
+                      cachedName="AlbumId"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[AlbumId]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">AlbumId</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT_DimTrack\Lookup Album.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Match Output].Columns[AlbumKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Match Output].Columns[AlbumKey]"
+                      name="AlbumKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">AlbumKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT_DimTrack\Lookup Album.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT_DimTrack\Lookup Album.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimTrack\Lookup Genre"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Genre"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimGenre]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimGenre]) [refTable]
+where [refTable].[GenreId] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="GenreKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GenreId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="120" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[GenreId]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimTrack\Lookup Genre.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimTrack\Lookup Genre.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\Lookup Genre.Inputs[Lookup Input].Columns[GenreId]"
+                      cachedDataType="i4"
+                      cachedName="GenreId"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[GenreId]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">GenreId</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT_DimTrack\Lookup Genre.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Match Output].Columns[GenreKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Match Output].Columns[GenreKey]"
+                      name="GenreKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">GenreKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT_DimTrack\Lookup Genre.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT_DimTrack\Lookup Genre.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimTrack\Lookup MediaType"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup MediaType"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimMediaType]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimMediaType]) [refTable]
+where [refTable].[MediaTypeId] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="MediaTypeKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MediaTypeId" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Name" dataType="DT_WSTR" length="120" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[MediaTypeId]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimTrack\Lookup MediaType.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimTrack\Lookup MediaType.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimTrack\Lookup MediaType.Inputs[Lookup Input].Columns[MediaTypeId]"
+                      cachedDataType="i4"
+                      cachedName="MediaTypeId"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[MediaTypeId]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">MediaTypeId</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT_DimTrack\Lookup MediaType.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Match Output].Columns[MediaTypeKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Match Output].Columns[MediaTypeKey]"
+                      name="MediaTypeKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">MediaTypeKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT_DimTrack\Lookup MediaType.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT_DimTrack\Lookup MediaType.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimTrack\Stage_Track"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Stage_Track"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_Track]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimTrack\Stage_Track.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[TrackId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[TrackId]"
+                      name="TrackId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      length="200"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[AlbumId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[AlbumId]"
+                      name="AlbumId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
+                      name="MediaTypeId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[GenreId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[GenreId]"
+                      name="GenreId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Composer]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[Composer]"
+                      length="220"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Composer]"
+                      name="Composer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Milliseconds]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[Milliseconds]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Milliseconds]"
+                      name="Milliseconds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Bytes]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[Bytes]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[Bytes]"
+                      name="Bytes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[UnitPrice]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
+                      dataType="i4"
+                      name="TrackId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="200"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
+                      dataType="i4"
+                      name="AlbumId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
+                      dataType="i4"
+                      name="MediaTypeId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
+                      dataType="i4"
+                      name="GenreId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[Composer]"
+                      dataType="wstr"
+                      length="220"
+                      name="Composer" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[Milliseconds]"
+                      dataType="i4"
+                      name="Milliseconds" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[Bytes]"
+                      dataType="i4"
+                      name="Bytes" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
+                      dataType="numeric"
+                      name="UnitPrice"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[TrackId]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[TrackId]"
+                      name="TrackId" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
+                      name="AlbumId" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
+                      name="MediaTypeId" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[GenreId]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[GenreId]"
+                      name="GenreId" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[Composer]"
+                      dataType="wstr"
+                      length="220"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[Composer]"
+                      name="Composer" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[Milliseconds]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[Milliseconds]"
+                      name="Milliseconds" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[Bytes]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[Bytes]"
+                      name="Bytes" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
+                      dataType="numeric"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_DimTrack.Paths[Lookup Match Output]"
+              endId="Package\DFT_DimTrack\Lookup Genre.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DFT_DimTrack\Lookup Album.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT_DimTrack.Paths[Lookup Match Output1]"
+              endId="Package\DFT_DimTrack\Lookup MediaType.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\DFT_DimTrack\Lookup Genre.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT_DimTrack.Paths[Lookup Match Output2]"
+              endId="Package\DFT_DimTrack\DimTrack.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\DFT_DimTrack\Lookup MediaType.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\DFT_DimTrack.Paths[OLE DB Source Output]"
+              endId="Package\DFT_DimTrack\Lookup Album.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_DimTrack\Stage_Track.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2767,6 +3730,176 @@ where [refTable].[ArtistId] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\DFT_DimTrack">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\DFT_DimTrack\Stage_Track"
+          TopLeft="105.999998420477,46.9999992996454" />
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\DFT_DimTrack\DimTrack"
+          TopLeft="494.999992623925,372.999994441867" />
+        <NodeLayout
+          Size="144.8,41.6"
+          Id="Package\DFT_DimTrack\Lookup Album"
+          TopLeft="183.999997258186,128.99999807775" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\DFT_DimTrack\Lookup Genre"
+          TopLeft="295.999995589256,209.999996870756" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\DFT_DimTrack\Lookup MediaType"
+          TopLeft="377.999994367361,293.999995619059" />
+        <EdgeLayout
+          Id="Package\DFT_DimTrack.Paths[OLE DB Source Output]"
+          TopLeft="174.799998420477,88.5999992996454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.5999988377095,40.3999987781049"
+              Start="0,0"
+              End="81.5999988377095,32.8999987781049">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.1999993890524" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.1999993890524"
+                    Point2="0,20.1999993890524"
+                    Point3="4,20.1999993890524" />
+                  <mssgle:LineSegment
+                    End="77.5999988377095,20.1999993890524" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77.5999988377095,20.1999993890524"
+                    Point2="81.5999988377095,20.1999993890524"
+                    Point3="81.5999988377095,24.1999993890524" />
+                  <mssgle:LineSegment
+                    End="81.5999988377095,32.8999987781049" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimTrack.Paths[Lookup Match Output]"
+          TopLeft="256.399997258186,170.59999807775">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="111.59999833107,39.3999987930059"
+              Start="0,0"
+              End="111.59999833107,31.8999987930059">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.699999396503" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.699999396503"
+                    Point2="0,19.699999396503"
+                    Point3="4,19.699999396503" />
+                  <mssgle:LineSegment
+                    End="107.59999833107,19.699999396503" />
+                  <mssgle:CubicBezierSegment
+                    Point1="107.59999833107,19.699999396503"
+                    Point2="111.59999833107,19.699999396503"
+                    Point3="111.59999833107,23.699999396503" />
+                  <mssgle:LineSegment
+                    End="111.59999833107,31.8999987930059" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="7.6086124467849,24.699999396503,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimTrack.Paths[Lookup Match Output1]"
+          TopLeft="367.999995589256,251.599996870756">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.1999987781049,42.3999987483024"
+              Start="0,0"
+              End="93.1999987781049,34.8999987483024">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.1999993741512" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.1999993741512"
+                    Point2="0,21.1999993741512"
+                    Point3="4,21.1999993741512" />
+                  <mssgle:LineSegment
+                    End="89.1999987781049,21.1999993741512" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89.1999987781049,21.1999993741512"
+                    Point2="93.1999987781049,21.1999993741512"
+                    Point3="93.1999987781049,25.1999993741512" />
+                  <mssgle:LineSegment
+                    End="93.1999987781049,34.8999987483024" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-1.59138732969756,26.1999993741512,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimTrack.Paths[Lookup Match Output2]"
+          TopLeft="461.199994367361,335.599995619059">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="95.399998256564,37.3999988228085"
+              Start="0,0"
+              End="95.399998256564,29.8999988228085">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.6999994114043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.6999994114043"
+                    Point2="0,18.6999994114043"
+                    Point3="4,18.6999994114043" />
+                  <mssgle:LineSegment
+                    End="91.399998256564,18.6999994114043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="91.399998256564,18.6999994114043"
+                    Point2="95.399998256564,18.6999994114043"
+                    Point3="95.399998256564,22.6999994114043" />
+                  <mssgle:LineSegment
+                    End="95.399998256564,29.8999988228085" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.491387590468001,23.6999994114043,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_DimCustomer\Stage_Customer">
     <Properties>
@@ -2917,6 +4050,101 @@ where [refTable].[ArtistId] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\Stage_Track">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\DimTrack">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\Lookup Album">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAlbum]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\Lookup Genre">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimGenre]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\Lookup MediaType">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimMediaType]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
