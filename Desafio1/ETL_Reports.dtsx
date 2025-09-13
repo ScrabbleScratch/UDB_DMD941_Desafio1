@@ -1,0 +1,1295 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/13/2025 2:12:59 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MAOA-PC"
+  DTS:CreatorName="MAOA-PC\scrab"
+  DTS:DTSID="{1B051B34-625F-4008-8167-2454472577DB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{86C23E93-6467-46C6-AF34-3990D85BCDCD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{16115A08-4508-40E4-91CD-DD713C7A89FA}"
+      DTS:ObjectName="localhost.ChinookDW.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ChinookDW;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{16115A08-4508-40E4-91CD-DD713C7A89FA}localhost.ChinookDW.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACJVyyu42lrcHW2agapnZbmuYH3+aLonQrCcf1rP94enQAAAAAOgAAAAAIAACAAAACXwFTK+u3zp8E8yTWHy1x+3im3XwbeHRrkfbMrUt/YuiAAAABadadFtk0b227Tl8pF6CBJ6QPG9lEbR51E1QsAuE7ldUAAAACX13cxQny8qY8r0Zc6auC0LW2NOhS/XLm7KeQlzNkYtu7hAaNYKai7Fk5jBRJsBiR4XP001LLTJRwdRNJzc6p4</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[VentasArtista]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7734550C-30DD-4308-90C4-330B169E5CDE}"
+      DTS:ObjectName="VentasArtista">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\scrab\OneDrive - Universidad Don Bosco\CICLO 4\DMD941\Desafio 1\Desafio1\Resultados\VentasArtista.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="120"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Artista"
+              DTS:DTSID="{C1A38B34-7092-4860-AB1A-F5917744F412}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalVentas"
+              DTS:DTSID="{2792322E-FD15-4A34-A0FE-0AEB9A565CE4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[VentasCliente]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B3EFF225-6618-4801-BB34-93FF99DCFBDB}"
+      DTS:ObjectName="VentasCliente">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\scrab\OneDrive - Universidad Don Bosco\CICLO 4\DMD941\Desafio 1\Desafio1\Resultados\VentasCliente.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerKey"
+              DTS:DTSID="{A0796F88-7F16-48B1-9379-C1F5DE8843C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="81"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cliente"
+              DTS:DTSID="{EA03B657-2355-496F-AEF2-3B156847F118}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalVentas"
+              DTS:DTSID="{B0E07277-3DC3-424D-A3C6-9754E15D5D4E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[VentasGenero]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{92BC1C2D-9BD4-4AFA-A93F-F745606EC54A}"
+      DTS:ObjectName="VentasGenero">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\scrab\OneDrive - Universidad Don Bosco\CICLO 4\DMD941\Desafio 1\Desafio1\Resultados\VentasGenero.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="120"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Genero"
+              DTS:DTSID="{282BFABB-D633-410B-860E-660C1FD6FEF3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalVentas"
+              DTS:DTSID="{E32EB5F3-52B6-44A6-B7E4-3BE5A88E28CA}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[VentasPais]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9DEDDC0E-AD5F-4461-A08D-92F50EE6AC91}"
+      DTS:ObjectName="VentasPais">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\scrab\OneDrive - Universidad Don Bosco\CICLO 4\DMD941\Desafio 1\Desafio1\Resultados\VentasPais.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{A809FA7E-7842-445A-9AFC-2C040DE1F7D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalVentas"
+              DTS:DTSID="{94F5F46B-BCC9-4A92-ADB1-3D82631BE978}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DB1103B9-950B-4685-A677-3C20AF6D7001}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Ventas por Artista"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Ventas por Artista"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    a.Name AS Artista,
+    SUM(f.TotalLine) AS TotalVentas
+FROM FactSales f
+JOIN DimTrack t
+    ON f.TrackKey = t.TrackKey
+JOIN DimAlbum al
+    ON t.AlbumKey = al.AlbumKey
+JOIN DimArtist a
+    ON al.ArtistKey = a.ArtistKey
+GROUP BY a.Name
+ORDER BY TotalVentas DESC;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Ventas por Artista.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].Columns[Artista]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].ExternalColumns[Artista]"
+                      length="120"
+                      lineageId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].Columns[Artista]"
+                      name="Artista"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].Columns[TotalVentas]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
+                      lineageId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].Columns[TotalVentas]"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].ExternalColumns[Artista]"
+                      dataType="wstr"
+                      length="120"
+                      name="Artista" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
+                      dataType="numeric"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Error Output].Columns[Artista]"
+                      dataType="wstr"
+                      length="120"
+                      lineageId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Error Output].Columns[Artista]"
+                      name="Artista" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Ventas por Cliente"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Ventas por Cliente"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    c.CustomerKey,
+    c.FirstName + ' ' + c.LastName AS Cliente,
+    SUM(f.TotalLine) AS TotalVentas
+FROM FactSales f
+JOIN DimCustomer c 
+    ON f.CustomerKey = c.CustomerKey
+GROUP BY c.CustomerKey, c.FirstName, c.LastName
+ORDER BY TotalVentas DESC;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Ventas por Cliente.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].Columns[CustomerKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].ExternalColumns[CustomerKey]"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].Columns[CustomerKey]"
+                      name="CustomerKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].Columns[Cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].ExternalColumns[Cliente]"
+                      length="81"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].Columns[Cliente]"
+                      name="Cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].Columns[TotalVentas]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].Columns[TotalVentas]"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].ExternalColumns[CustomerKey]"
+                      dataType="i4"
+                      name="CustomerKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].ExternalColumns[Cliente]"
+                      dataType="wstr"
+                      length="81"
+                      name="Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
+                      dataType="numeric"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[CustomerKey]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[CustomerKey]"
+                      name="CustomerKey" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[Cliente]"
+                      dataType="wstr"
+                      length="81"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[Cliente]"
+                      name="Cliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Ventas por Genero"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Ventas por Genero"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    g.Name AS Genero,
+    SUM(f.TotalLine) AS TotalVentas
+FROM FactSales f
+JOIN DimTrack t 
+    ON f.TrackKey = t.TrackKey
+JOIN DimGenre g
+    ON t.GenreKey = g.GenreKey
+GROUP BY g.Name
+ORDER BY TotalVentas DESC;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Ventas por Genero.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].Columns[Genero]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].ExternalColumns[Genero]"
+                      length="120"
+                      lineageId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].Columns[Genero]"
+                      name="Genero"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].Columns[TotalVentas]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
+                      lineageId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].Columns[TotalVentas]"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].ExternalColumns[Genero]"
+                      dataType="wstr"
+                      length="120"
+                      name="Genero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
+                      dataType="numeric"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Error Output].Columns[Genero]"
+                      dataType="wstr"
+                      length="120"
+                      lineageId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Error Output].Columns[Genero]"
+                      name="Genero" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Ventas por Pais"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Ventas por Pais"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    c.Country,
+    SUM(f.TotalLine) AS TotalVentas
+FROM FactSales f
+JOIN DimCustomer c
+    ON f.CustomerKey = c.CustomerKey
+GROUP BY c.Country
+ORDER BY TotalVentas DESC;</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Ventas por Pais.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].Columns[TotalVentas]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
+                      lineageId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].Columns[TotalVentas]"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="40"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].ExternalColumns[TotalVentas]"
+                      dataType="numeric"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Error Output].Columns[TotalVentas]"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\VentasArtista"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="VentasArtista"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\VentasArtista.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VentasArtista]"
+                  connectionManagerRefId="Package.ConnectionManagers[VentasArtista]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\VentasArtista.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\VentasArtista.Inputs[Flat File Destination Input].Columns[Artista]"
+                      cachedDataType="wstr"
+                      cachedLength="120"
+                      cachedName="Artista"
+                      externalMetadataColumnId="Package\Data Flow Task\VentasArtista.Inputs[Flat File Destination Input].ExternalColumns[Artista]"
+                      lineageId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].Columns[Artista]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\VentasArtista.Inputs[Flat File Destination Input].Columns[TotalVentas]"
+                      cachedDataType="numeric"
+                      cachedName="TotalVentas"
+                      cachedPrecision="38"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\VentasArtista.Inputs[Flat File Destination Input].ExternalColumns[TotalVentas]"
+                      lineageId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output].Columns[TotalVentas]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\VentasArtista.Inputs[Flat File Destination Input].ExternalColumns[Artista]"
+                      dataType="wstr"
+                      length="120"
+                      name="Artista" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\VentasArtista.Inputs[Flat File Destination Input].ExternalColumns[TotalVentas]"
+                      dataType="numeric"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\VentasCliente"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="VentasCliente"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\VentasCliente.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VentasCliente]"
+                  connectionManagerRefId="Package.ConnectionManagers[VentasCliente]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input].Columns[CustomerKey]"
+                      cachedDataType="i4"
+                      cachedName="CustomerKey"
+                      externalMetadataColumnId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input].ExternalColumns[CustomerKey]"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].Columns[CustomerKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input].Columns[Cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="81"
+                      cachedName="Cliente"
+                      externalMetadataColumnId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input].ExternalColumns[Cliente]"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].Columns[Cliente]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input].Columns[TotalVentas]"
+                      cachedDataType="numeric"
+                      cachedName="TotalVentas"
+                      cachedPrecision="38"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input].ExternalColumns[TotalVentas]"
+                      lineageId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output].Columns[TotalVentas]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input].ExternalColumns[CustomerKey]"
+                      dataType="i4"
+                      name="CustomerKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input].ExternalColumns[Cliente]"
+                      dataType="wstr"
+                      length="81"
+                      name="Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input].ExternalColumns[TotalVentas]"
+                      dataType="numeric"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\VentasGenero"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="VentasGenero"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\VentasGenero.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VentasGenero]"
+                  connectionManagerRefId="Package.ConnectionManagers[VentasGenero]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\VentasGenero.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\VentasGenero.Inputs[Flat File Destination Input].Columns[Genero]"
+                      cachedDataType="wstr"
+                      cachedLength="120"
+                      cachedName="Genero"
+                      externalMetadataColumnId="Package\Data Flow Task\VentasGenero.Inputs[Flat File Destination Input].ExternalColumns[Genero]"
+                      lineageId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].Columns[Genero]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\VentasGenero.Inputs[Flat File Destination Input].Columns[TotalVentas]"
+                      cachedDataType="numeric"
+                      cachedName="TotalVentas"
+                      cachedPrecision="38"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\VentasGenero.Inputs[Flat File Destination Input].ExternalColumns[TotalVentas]"
+                      lineageId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output].Columns[TotalVentas]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\VentasGenero.Inputs[Flat File Destination Input].ExternalColumns[Genero]"
+                      dataType="wstr"
+                      length="120"
+                      name="Genero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\VentasGenero.Inputs[Flat File Destination Input].ExternalColumns[TotalVentas]"
+                      dataType="numeric"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\VentasPais"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="VentasPais"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\VentasPais.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[VentasPais]"
+                  connectionManagerRefId="Package.ConnectionManagers[VentasPais]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\VentasPais.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\VentasPais.Inputs[Flat File Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Data Flow Task\VentasPais.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\VentasPais.Inputs[Flat File Destination Input].Columns[TotalVentas]"
+                      cachedDataType="numeric"
+                      cachedName="TotalVentas"
+                      cachedPrecision="38"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\VentasPais.Inputs[Flat File Destination Input].ExternalColumns[TotalVentas]"
+                      lineageId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output].Columns[TotalVentas]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\VentasPais.Inputs[Flat File Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="40"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\VentasPais.Inputs[Flat File Destination Input].ExternalColumns[TotalVentas]"
+                      dataType="numeric"
+                      name="TotalVentas"
+                      precision="38"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\VentasCliente.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Ventas por Cliente.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Task\VentasGenero.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Ventas por Genero.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output2]"
+              endId="Package\Data Flow Task\VentasArtista.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Ventas por Artista.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output3]"
+              endId="Package\Data Flow Task\VentasPais.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\Ventas por Pais.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="78.3333290533889,35.533333086239" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Data Flow Task\Ventas por Cliente"
+          TopLeft="64.9999964485567,45.9333330139187" />
+        <NodeLayout
+          Size="143.2,41.6"
+          Id="Package\Data Flow Task\VentasCliente"
+          TopLeft="321.666649091576,48.5333329958385" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="228.999996448557,68.0333330048786">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="92.6666526430189,0"
+              Start="0,0"
+              End="85.1666526430189,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="85.1666526430189,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Data Flow Task\Ventas por Genero"
+          TopLeft="63.3333298729527,116.133332525757" />
+        <NodeLayout
+          Size="145.6,41.6"
+          Id="Package\Data Flow Task\VentasGenero"
+          TopLeft="314.166649501357,114.399999204477" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\Data Flow Task\Ventas por Artista"
+          TopLeft="63.3333298729528,182.866665395035" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Data Flow Task\VentasArtista"
+          TopLeft="314.166649501358,181.999998734395" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Data Flow Task\Ventas por Pais"
+          TopLeft="63.3333298729527,254.799998228153" />
+        <NodeLayout
+          Size="131.2,41.6"
+          Id="Package\Data Flow Task\VentasPais"
+          TopLeft="319.166649228169,255.399998246233" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output1]"
+          TopLeft="229.733329872953,136.066665865117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.4333196284048,0"
+              Start="0,0"
+              End="76.9333196284048,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="76.9333196284048,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output2]"
+          TopLeft="224.133329872953,203.233332064715">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90.033319628405,0"
+              Start="0,0"
+              End="82.533319628405,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="82.533319628405,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output3]"
+          TopLeft="215.333329872953,275.899998237193">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103.833319355217,0"
+              Start="0,0"
+              End="96.3333193552168,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="96.3333193552168,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Ventas por Cliente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Ventas por Genero">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Ventas por Artista">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Ventas por Pais">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
