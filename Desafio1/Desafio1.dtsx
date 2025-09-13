@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{75381285-2A7E-4D6D-83CA-01967B2DD620}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{E98D41B9-1208-4471-9A77-EB550DF2954A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAALRZ1MbrzckJmxJzcBo6rtnoneqKQc0n9MKkDkIGMQFQAAAAAOgAAAAAIAACAAAACPilgFEimbqeyzMJuxdMJDWciUJpO9S9R3YIyVgNWLliAAAAA2Z8ONslvzMY6w2xafR5zn+QDpfZbbYJ4vzJf4og+woUAAAADzGlpUfBBf4fQ1ipq2TnaCOQttFMfNJntyWXrIG6DVMwTvtaUnDiXMiPGeqqqRAOctpDMvYlNyAqPYk8qeE9xv</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD+MLVCv6Ssa45NoKqkl4LPUhQzFqoZ495xILwa5PEvjAAAAAAOgAAAAAIAACAAAAD7qMi3xU0nbUBOG8+K+VX0a63N5pwXE8WT52MXodCf2yAAAADHkO9IT2ASCK+xZCCwiAd+c8wa99Xxey4WFJDeqATtrUAAAAA/9aUgAad5ekh010kCYlPI5rUTatWvJcpjvyODj/9T8m4DoN1+Kg/L8/UeAUVJY3UdysyOH1lrtO49/6WBfY8v</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -37,13 +37,13 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Extraer Data de Chinook"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{07170CFD-31BF-4CBB-B874-5C4E23BC0836}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Extraer Data de Chinook"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -51,7 +51,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Album"
+              refId="Package\Extraer Data de Chinook\Album"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -100,7 +100,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Album.Connections[OleDbConnection]"
+                  refId="Package\Extraer Data de Chinook\Album.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -108,86 +108,86 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output]"
+                  refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].Columns[AlbumId]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].Columns[AlbumId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
-                      lineageId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].Columns[AlbumId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].Columns[AlbumId]"
                       name="AlbumId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].Columns[Title]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].Columns[Title]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].ExternalColumns[Title]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].ExternalColumns[Title]"
                       length="160"
-                      lineageId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].Columns[Title]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].Columns[Title]"
                       name="Title"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].Columns[ArtistId]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].Columns[ArtistId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].ExternalColumns[ArtistId]"
-                      lineageId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].Columns[ArtistId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].ExternalColumns[ArtistId]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].Columns[ArtistId]"
                       name="ArtistId"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
                       dataType="i4"
                       name="AlbumId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].ExternalColumns[Title]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].ExternalColumns[Title]"
                       dataType="wstr"
                       length="160"
                       name="Title" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Output].ExternalColumns[ArtistId]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].ExternalColumns[ArtistId]"
                       dataType="i4"
                       name="ArtistId" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
                       name="AlbumId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[Title]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[Title]"
                       dataType="wstr"
                       length="160"
-                      lineageId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[Title]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[Title]"
                       name="Title" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[ArtistId]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[ArtistId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[ArtistId]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[ArtistId]"
                       name="ArtistId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Album.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -196,7 +196,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Artist"
+              refId="Package\Extraer Data de Chinook\Artist"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -245,7 +245,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Artist.Connections[OleDbConnection]"
+                  refId="Package\Extraer Data de Chinook\Artist.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -253,68 +253,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Output]"
+                  refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Output].Columns[ArtistId]"
+                      refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].Columns[ArtistId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Output].ExternalColumns[ArtistId]"
-                      lineageId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Output].Columns[ArtistId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].ExternalColumns[ArtistId]"
+                      lineageId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].Columns[ArtistId]"
                       name="ArtistId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Output].Columns[Name]"
+                      refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].Columns[Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       length="120"
-                      lineageId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Output].Columns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].Columns[Name]"
                       name="Name"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Output].ExternalColumns[ArtistId]"
+                      refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].ExternalColumns[ArtistId]"
                       dataType="i4"
                       name="ArtistId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       dataType="wstr"
                       length="120"
                       name="Name" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Error Output].Columns[ArtistId]"
+                      refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Error Output].Columns[ArtistId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Error Output].Columns[ArtistId]"
+                      lineageId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Error Output].Columns[ArtistId]"
                       name="ArtistId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Error Output].Columns[Name]"
                       dataType="wstr"
                       length="120"
-                      lineageId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Error Output].Columns[Name]"
                       name="Name" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Artist.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -323,7 +323,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Customer"
+              refId="Package\Extraer Data de Chinook\Customer"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -372,7 +372,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Customer.Connections[OleDbConnection]"
+                  refId="Package\Extraer Data de Chinook\Customer.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -380,296 +380,296 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output]"
+                  refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[CustomerId]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[CustomerId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[CustomerId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[CustomerId]"
                       name="CustomerId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[FirstName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
                       length="40"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[FirstName]"
                       name="FirstName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[LastName]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[LastName]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
                       length="20"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[LastName]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[LastName]"
                       name="LastName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Company]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Company]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Company]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Company]"
                       length="80"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Company]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Company]"
                       name="Company"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Address]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Address]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Address]"
                       length="70"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Address]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Address]"
                       name="Address"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[City]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[City]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[City]"
                       length="40"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[City]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[City]"
                       name="City"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[State]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[State]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[State]"
                       length="40"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[State]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[State]"
                       name="State"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Country]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Country]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Country]"
                       length="40"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Country]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Country]"
                       name="Country"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[PostalCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
                       length="10"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[PostalCode]"
                       name="PostalCode"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Phone]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Phone]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
                       length="24"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Phone]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Phone]"
                       name="Phone"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Fax]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Fax]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
                       length="24"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Fax]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Fax]"
                       name="Fax"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Email]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Email]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Email]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Email]"
                       length="60"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[Email]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Email]"
                       name="Email"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[SupportRepId]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[SupportRepId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[SupportRepId]"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].Columns[SupportRepId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[SupportRepId]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[SupportRepId]"
                       name="SupportRepId"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
                       dataType="i4"
                       name="CustomerId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
                       dataType="wstr"
                       length="40"
                       name="FirstName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
                       dataType="wstr"
                       length="20"
                       name="LastName" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Company]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Company]"
                       dataType="wstr"
                       length="80"
                       name="Company" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Address]"
                       dataType="wstr"
                       length="70"
                       name="Address" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[City]"
                       dataType="wstr"
                       length="40"
                       name="City" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[State]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[State]"
                       dataType="wstr"
                       length="40"
                       name="State" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Country]"
                       dataType="wstr"
                       length="40"
                       name="Country" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
                       dataType="wstr"
                       length="10"
                       name="PostalCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
                       dataType="wstr"
                       length="24"
                       name="Phone" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
                       dataType="wstr"
                       length="24"
                       name="Fax" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[Email]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[Email]"
                       dataType="wstr"
                       length="60"
                       name="Email" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Output].ExternalColumns[SupportRepId]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].ExternalColumns[SupportRepId]"
                       dataType="i4"
                       name="SupportRepId" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
                       name="CustomerId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[FirstName]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[FirstName]"
                       name="FirstName" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[LastName]"
                       dataType="wstr"
                       length="20"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[LastName]"
                       name="LastName" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Company]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Company]"
                       dataType="wstr"
                       length="80"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Company]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Company]"
                       name="Company" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Address]"
                       dataType="wstr"
                       length="70"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Address]"
                       name="Address" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[City]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[City]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[City]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[City]"
                       name="City" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[State]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[State]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[State]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[State]"
                       name="State" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Country]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Country]"
                       name="Country" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
                       name="PostalCode" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Phone]"
                       dataType="wstr"
                       length="24"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Phone]"
                       name="Phone" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Fax]"
                       dataType="wstr"
                       length="24"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Fax]"
                       name="Fax" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Email]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Email]"
                       dataType="wstr"
                       length="60"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[Email]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[Email]"
                       name="Email" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[SupportRepId]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[SupportRepId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[SupportRepId]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[SupportRepId]"
                       name="SupportRepId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Customer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -678,7 +678,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Genre"
+              refId="Package\Extraer Data de Chinook\Genre"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -727,7 +727,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Genre.Connections[OleDbConnection]"
+                  refId="Package\Extraer Data de Chinook\Genre.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -735,68 +735,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Output]"
+                  refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Output].Columns[GenreId]"
+                      refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].Columns[GenreId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
-                      lineageId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Output].Columns[GenreId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
+                      lineageId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].Columns[GenreId]"
                       name="GenreId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Output].Columns[Name]"
+                      refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].Columns[Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       length="120"
-                      lineageId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Output].Columns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].Columns[Name]"
                       name="Name"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
+                      refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
                       dataType="i4"
                       name="GenreId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       dataType="wstr"
                       length="120"
                       name="Name" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Error Output].Columns[GenreId]"
+                      refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Error Output].Columns[GenreId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Error Output].Columns[GenreId]"
+                      lineageId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Error Output].Columns[GenreId]"
                       name="GenreId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Error Output].Columns[Name]"
                       dataType="wstr"
                       length="120"
-                      lineageId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Error Output].Columns[Name]"
                       name="Name" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Genre.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -805,7 +805,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Invoice"
+              refId="Package\Extraer Data de Chinook\Invoice"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -854,7 +854,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Invoice.Connections[OleDbConnection]"
+                  refId="Package\Extraer Data de Chinook\Invoice.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -862,93 +862,93 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output]"
+                  refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceId]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[InvoiceId]"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[InvoiceId]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceId]"
                       name="InvoiceId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[CustomerId]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[CustomerId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[CustomerId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[CustomerId]"
                       name="CustomerId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceDate]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceDate]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[InvoiceDate]"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceDate]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[InvoiceDate]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceDate]"
                       name="InvoiceDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingAddress]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingAddress]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingAddress]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingAddress]"
                       length="70"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingAddress]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingAddress]"
                       name="BillingAddress"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingCity]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingCity]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingCity]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingCity]"
                       length="40"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingCity]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingCity]"
                       name="BillingCity"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingState]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingState]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingState]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingState]"
                       length="40"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingState]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingState]"
                       name="BillingState"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingCountry]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingCountry]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingCountry]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingCountry]"
                       length="40"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingCountry]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingCountry]"
                       name="BillingCountry"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingPostalCode]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingPostalCode]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingPostalCode]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingPostalCode]"
                       length="10"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[BillingPostalCode]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingPostalCode]"
                       name="BillingPostalCode"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[Total]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[Total]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[Total]"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].Columns[Total]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[Total]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[Total]"
                       name="Total"
                       precision="10"
                       scale="2"
@@ -957,44 +957,44 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[InvoiceId]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[InvoiceId]"
                       dataType="i4"
                       name="InvoiceId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[CustomerId]"
                       dataType="i4"
                       name="CustomerId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[InvoiceDate]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[InvoiceDate]"
                       dataType="dbTimeStamp"
                       name="InvoiceDate" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingAddress]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingAddress]"
                       dataType="wstr"
                       length="70"
                       name="BillingAddress" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingCity]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingCity]"
                       dataType="wstr"
                       length="40"
                       name="BillingCity" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingState]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingState]"
                       dataType="wstr"
                       length="40"
                       name="BillingState" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingCountry]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingCountry]"
                       dataType="wstr"
                       length="40"
                       name="BillingCountry" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingPostalCode]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[BillingPostalCode]"
                       dataType="wstr"
                       length="10"
                       name="BillingPostalCode" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Output].ExternalColumns[Total]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].ExternalColumns[Total]"
                       dataType="numeric"
                       name="Total"
                       precision="10"
@@ -1002,72 +1002,72 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[InvoiceId]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[InvoiceId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[InvoiceId]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[InvoiceId]"
                       name="InvoiceId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[CustomerId]"
                       name="CustomerId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[InvoiceDate]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[InvoiceDate]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[InvoiceDate]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[InvoiceDate]"
                       name="InvoiceDate" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingAddress]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingAddress]"
                       dataType="wstr"
                       length="70"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingAddress]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingAddress]"
                       name="BillingAddress" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingCity]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingCity]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingCity]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingCity]"
                       name="BillingCity" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingState]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingState]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingState]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingState]"
                       name="BillingState" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingCountry]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingCountry]"
                       dataType="wstr"
                       length="40"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingCountry]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingCountry]"
                       name="BillingCountry" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingPostalCode]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingPostalCode]"
                       dataType="wstr"
                       length="10"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingPostalCode]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[BillingPostalCode]"
                       name="BillingPostalCode" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[Total]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[Total]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[Total]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[Total]"
                       name="Total"
                       precision="10"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Invoice.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1076,7 +1076,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\InvoiceLine"
+              refId="Package\Extraer Data de Chinook\InvoiceLine"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -1125,7 +1125,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\InvoiceLine.Connections[OleDbConnection]"
+                  refId="Package\Extraer Data de Chinook\InvoiceLine.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1133,125 +1133,125 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output]"
+                  refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceLineId]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceLineId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[InvoiceLineId]"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceLineId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[InvoiceLineId]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceLineId]"
                       name="InvoiceLineId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceId]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[InvoiceId]"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[InvoiceId]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceId]"
                       name="InvoiceId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[TrackId]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[TrackId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[TrackId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[TrackId]"
                       name="TrackId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[UnitPrice]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[UnitPrice]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[UnitPrice]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[UnitPrice]"
                       name="UnitPrice"
                       precision="10"
                       scale="2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[Quantity]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[Quantity]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[Quantity]"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].Columns[Quantity]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[Quantity]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[Quantity]"
                       name="Quantity"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[InvoiceLineId]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[InvoiceLineId]"
                       dataType="i4"
                       name="InvoiceLineId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[InvoiceId]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[InvoiceId]"
                       dataType="i4"
                       name="InvoiceId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
                       dataType="i4"
                       name="TrackId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
                       dataType="numeric"
                       name="UnitPrice"
                       precision="10"
                       scale="2" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[Quantity]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].ExternalColumns[Quantity]"
                       dataType="i4"
                       name="Quantity" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[InvoiceLineId]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[InvoiceLineId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[InvoiceLineId]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[InvoiceLineId]"
                       name="InvoiceLineId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[InvoiceId]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[InvoiceId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[InvoiceId]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[InvoiceId]"
                       name="InvoiceId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[TrackId]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[TrackId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[TrackId]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[TrackId]"
                       name="TrackId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
                       name="UnitPrice"
                       precision="10"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[Quantity]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[Quantity]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[Quantity]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[Quantity]"
                       name="Quantity" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1260,7 +1260,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\MediaType"
+              refId="Package\Extraer Data de Chinook\MediaType"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -1309,7 +1309,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\MediaType.Connections[OleDbConnection]"
+                  refId="Package\Extraer Data de Chinook\MediaType.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1317,68 +1317,68 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Output]"
+                  refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
+                      refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
-                      lineageId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
+                      lineageId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
                       name="MediaTypeId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Output].Columns[Name]"
+                      refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].Columns[Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       length="120"
-                      lineageId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Output].Columns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].Columns[Name]"
                       name="Name"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
+                      refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
                       dataType="i4"
                       name="MediaTypeId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       dataType="wstr"
                       length="120"
                       name="Name" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
+                      refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
+                      lineageId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
                       name="MediaTypeId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Error Output].Columns[Name]"
                       dataType="wstr"
                       length="120"
-                      lineageId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Error Output].Columns[Name]"
                       name="Name" />
                     <outputColumn
-                      refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1387,7 +1387,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Track"
+              refId="Package\Extraer Data de Chinook\Track"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -1436,7 +1436,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Track.Connections[OleDbConnection]"
+                  refId="Package\Extraer Data de Chinook\Track.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook.sa1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -1444,90 +1444,90 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output]"
+                  refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[TrackId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[TrackId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[TrackId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[TrackId]"
                       name="TrackId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[Name]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       length="200"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Name]"
                       name="Name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[AlbumId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[AlbumId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[AlbumId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[AlbumId]"
                       name="AlbumId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
                       name="MediaTypeId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[GenreId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[GenreId]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[GenreId]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[GenreId]"
                       name="GenreId"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[Composer]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Composer]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[Composer]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[Composer]"
                       length="220"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[Composer]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Composer]"
                       name="Composer"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[Milliseconds]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Milliseconds]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[Milliseconds]"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[Milliseconds]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[Milliseconds]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Milliseconds]"
                       name="Milliseconds"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[Bytes]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Bytes]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[Bytes]"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[Bytes]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[Bytes]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Bytes]"
                       name="Bytes"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[UnitPrice]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[UnitPrice]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].Columns[UnitPrice]"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[UnitPrice]"
                       name="UnitPrice"
                       precision="10"
                       scale="2"
@@ -1536,41 +1536,41 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[TrackId]"
                       dataType="i4"
                       name="TrackId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       dataType="wstr"
                       length="200"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[AlbumId]"
                       dataType="i4"
                       name="AlbumId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
                       dataType="i4"
                       name="MediaTypeId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[GenreId]"
                       dataType="i4"
                       name="GenreId" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[Composer]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[Composer]"
                       dataType="wstr"
                       length="220"
                       name="Composer" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[Milliseconds]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[Milliseconds]"
                       dataType="i4"
                       name="Milliseconds" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[Bytes]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[Bytes]"
                       dataType="i4"
                       name="Bytes" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
                       dataType="numeric"
                       name="UnitPrice"
                       precision="10"
@@ -1578,69 +1578,69 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[TrackId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[TrackId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[TrackId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[TrackId]"
                       name="TrackId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[Name]"
                       dataType="wstr"
                       length="200"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[Name]"
                       name="Name" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[AlbumId]"
                       name="AlbumId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
                       name="MediaTypeId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[GenreId]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[GenreId]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[GenreId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[GenreId]"
                       name="GenreId" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[Composer]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[Composer]"
                       dataType="wstr"
                       length="220"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[Composer]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[Composer]"
                       name="Composer" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[Milliseconds]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[Milliseconds]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[Milliseconds]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[Milliseconds]"
                       name="Milliseconds" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[Bytes]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[Bytes]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[Bytes]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[Bytes]"
                       name="Bytes" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
                       dataType="numeric"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
                       name="UnitPrice"
                       precision="10"
                       scale="2" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Track.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1666,54 +1666,54 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task"
+          Size="192,41.6"
+          Id="Package\Extraer Data de Chinook"
           TopLeft="83.3333287802009,40.7333330500788" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Extraer Data de Chinook">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
           Size="111.2,41.6"
-          Id="Package\Data Flow Task\Invoice"
+          Id="Package\Extraer Data de Chinook\Invoice"
           TopLeft="17.9999997317791,43.9999993443489" />
         <NodeLayout
           Size="131.2,41.6"
-          Id="Package\Data Flow Task\InvoiceLine"
+          Id="Package\Extraer Data de Chinook\InvoiceLine"
           TopLeft="143.999997854233,43.9999993443489" />
         <NodeLayout
           Size="123.2,41.6"
-          Id="Package\Data Flow Task\Customer"
+          Id="Package\Extraer Data de Chinook\Customer"
           TopLeft="288.999995693564,42.9999993592501" />
         <NodeLayout
           Size="104.8,41.6"
-          Id="Package\Data Flow Task\Track"
+          Id="Package\Extraer Data de Chinook\Track"
           TopLeft="422.999993696809,43.9999993443489" />
         <NodeLayout
           Size="108,41.6"
-          Id="Package\Data Flow Task\Album"
+          Id="Package\Extraer Data de Chinook\Album"
           TopLeft="537.999991983176,43.9999993443489" />
         <NodeLayout
           Size="102.4,41.6"
-          Id="Package\Data Flow Task\Artist"
+          Id="Package\Extraer Data de Chinook\Artist"
           TopLeft="654.99999023974,43.9999993443489" />
         <NodeLayout
           Size="107.2,41.6"
-          Id="Package\Data Flow Task\Genre"
+          Id="Package\Extraer Data de Chinook\Genre"
           TopLeft="767.999988555908,45.9999993145466" />
         <NodeLayout
           Size="129.6,41.6"
-          Id="Package\Data Flow Task\MediaType"
+          Id="Package\Extraer Data de Chinook\MediaType"
           TopLeft="886.99998678267,45.9999995529651" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Invoice">
+    design-time-name="Package\Extraer Data de Chinook\Invoice">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1726,7 +1726,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\InvoiceLine">
+    design-time-name="Package\Extraer Data de Chinook\InvoiceLine">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1739,7 +1739,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Customer">
+    design-time-name="Package\Extraer Data de Chinook\Customer">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1752,7 +1752,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Track">
+    design-time-name="Package\Extraer Data de Chinook\Track">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1765,7 +1765,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Album">
+    design-time-name="Package\Extraer Data de Chinook\Album">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1778,7 +1778,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Artist">
+    design-time-name="Package\Extraer Data de Chinook\Artist">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1791,7 +1791,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Genre">
+    design-time-name="Package\Extraer Data de Chinook\Genre">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1804,7 +1804,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\MediaType">
+    design-time-name="Package\Extraer Data de Chinook\MediaType">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
