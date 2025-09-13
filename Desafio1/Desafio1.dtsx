@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{E98D41B9-1208-4471-9A77-EB550DF2954A}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{91F0C683-FE17-4703-B44F-FD98C13744C5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,24 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD+MLVCv6Ssa45NoKqkl4LPUhQzFqoZ495xILwa5PEvjAAAAAAOgAAAAAIAACAAAAD7qMi3xU0nbUBOG8+K+VX0a63N5pwXE8WT52MXodCf2yAAAADHkO9IT2ASCK+xZCCwiAd+c8wa99Xxey4WFJDeqATtrUAAAAA/9aUgAad5ekh010kCYlPI5rUTatWvJcpjvyODj/9T8m4DoN1+Kg/L8/UeAUVJY3UdysyOH1lrtO49/6WBfY8v</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADyvYsEFqXS0FyfYESp7Dl19pXJxvIXxjcm17SmtdHKfAAAAAAOgAAAAAIAACAAAADx4pifzGrdiAkvYd8r79hWqtq9zis5q/LhXmNUcNjL8SAAAADKZqB4Zg/iwZqlDds/JY2JExHBuxE8q5vkGVnn3qTJqkAAAAACGZvICaVpKaZIYkWpwtMdOviyp4bNggyk052K1GQei0C+Z15PloRZW62SUmfuqWVuKwsn/NDLBgS7n+BBrdyh</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{98ADD0F6-DA65-42D4-8E30-625327040A7A}"
+      DTS:ObjectName="localhost.Chinook_Staging.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=Chinook_Staging;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package-{98ADD0F6-DA65-42D4-8E30-625327040A7A}localhost.Chinook_Staging.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADeRot08Q+T0LSao9qaQm8mxjAZ3ZS/N0f5uZ2NnxcQdQAAAAAOgAAAAAIAACAAAACvznWgIcpiFObG5oyqXMv3L2S82QCyv6wcfKPPMvi+5iAAAADV4SBig9eSZP1ghoNf63eFBb+XILU5o8I9zLMqItO/kkAAAAAy89EiLmI48GsX4Sm6x6WAFnIVOItC8eejO7FfLrh2/D/cy9bf2AIHSJGpDGjxcahTD0X+NC/RmI0Vuq7nE3xM</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1387,6 +1404,1336 @@
               </outputs>
             </component>
             <component
+              refId="Package\Extraer Data de Chinook\Stage_Album"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_Album"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_Album]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extraer Data de Chinook\Stage_Album.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input].Columns[AlbumId]"
+                      cachedDataType="i4"
+                      cachedName="AlbumId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input].ExternalColumns[AlbumId]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].Columns[AlbumId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input].Columns[Title]"
+                      cachedDataType="wstr"
+                      cachedLength="160"
+                      cachedName="Title"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].Columns[Title]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input].Columns[ArtistId]"
+                      cachedDataType="i4"
+                      cachedName="ArtistId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input].ExternalColumns[ArtistId]"
+                      lineageId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output].Columns[ArtistId]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input].ExternalColumns[AlbumId]"
+                      dataType="i4"
+                      name="AlbumId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                      dataType="wstr"
+                      length="160"
+                      name="Title" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input].ExternalColumns[ArtistId]"
+                      dataType="i4"
+                      name="ArtistId" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extraer Data de Chinook\Stage_Album.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Album.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Album.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Album.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Album.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extraer Data de Chinook\Stage_Artist"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_Artist"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_Artist]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extraer Data de Chinook\Stage_Artist.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extraer Data de Chinook\Stage_Artist.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Artist.Inputs[OLE DB Destination Input].Columns[ArtistId]"
+                      cachedDataType="i4"
+                      cachedName="ArtistId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Artist.Inputs[OLE DB Destination Input].ExternalColumns[ArtistId]"
+                      lineageId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].Columns[ArtistId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Artist.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="120"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Artist.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output].Columns[Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Artist.Inputs[OLE DB Destination Input].ExternalColumns[ArtistId]"
+                      dataType="i4"
+                      name="ArtistId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Artist.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="120"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extraer Data de Chinook\Stage_Artist.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extraer Data de Chinook\Stage_Artist.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Artist.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Artist.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Artist.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Artist.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extraer Data de Chinook\Stage_Customer"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_Customer"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_Customer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extraer Data de Chinook\Stage_Customer.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[CustomerId]"
+                      cachedDataType="i4"
+                      cachedName="CustomerId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[CustomerId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[LastName]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[Company]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="Company"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Company]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="70"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[State]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="State"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[State]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[Phone]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Phone"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Phone]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[Fax]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Fax"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Fax]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Fax]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].Columns[SupportRepId]"
+                      cachedDataType="i4"
+                      cachedName="SupportRepId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[SupportRepId]"
+                      lineageId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output].Columns[SupportRepId]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
+                      dataType="i4"
+                      name="CustomerId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="40"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="20"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Company]"
+                      dataType="wstr"
+                      length="80"
+                      name="Company" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="70"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="40"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[State]"
+                      dataType="wstr"
+                      length="40"
+                      name="State" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="40"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      dataType="wstr"
+                      length="60"
+                      name="Email" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input].ExternalColumns[SupportRepId]"
+                      dataType="i4"
+                      name="SupportRepId" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extraer Data de Chinook\Stage_Customer.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extraer Data de Chinook\Stage_Genre"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_Genre"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_Genre]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extraer Data de Chinook\Stage_Genre.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extraer Data de Chinook\Stage_Genre.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Genre.Inputs[OLE DB Destination Input].Columns[GenreId]"
+                      cachedDataType="i4"
+                      cachedName="GenreId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Genre.Inputs[OLE DB Destination Input].ExternalColumns[GenreId]"
+                      lineageId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].Columns[GenreId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Genre.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="120"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Genre.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output].Columns[Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Genre.Inputs[OLE DB Destination Input].ExternalColumns[GenreId]"
+                      dataType="i4"
+                      name="GenreId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Genre.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="120"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extraer Data de Chinook\Stage_Genre.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extraer Data de Chinook\Stage_Genre.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Genre.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Genre.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Genre.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Genre.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extraer Data de Chinook\Stage_Invoice"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_Invoice"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_Invoice]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extraer Data de Chinook\Stage_Invoice.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].Columns[InvoiceId]"
+                      cachedDataType="i4"
+                      cachedName="InvoiceId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[InvoiceId]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].Columns[CustomerId]"
+                      cachedDataType="i4"
+                      cachedName="CustomerId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[CustomerId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].Columns[InvoiceDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="InvoiceDate"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[InvoiceDate]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[InvoiceDate]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].Columns[BillingAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="70"
+                      cachedName="BillingAddress"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingAddress]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingAddress]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].Columns[BillingCity]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="BillingCity"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingCity]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingCity]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].Columns[BillingState]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="BillingState"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingState]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingState]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].Columns[BillingCountry]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="BillingCountry"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingCountry]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingCountry]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].Columns[BillingPostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="BillingPostalCode"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingPostalCode]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[BillingPostalCode]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].Columns[Total]"
+                      cachedDataType="numeric"
+                      cachedName="Total"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[Total]"
+                      lineageId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output].Columns[Total]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[InvoiceId]"
+                      dataType="i4"
+                      name="InvoiceId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[CustomerId]"
+                      dataType="i4"
+                      name="CustomerId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[InvoiceDate]"
+                      dataType="dbTimeStamp"
+                      name="InvoiceDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingAddress]"
+                      dataType="wstr"
+                      length="70"
+                      name="BillingAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingCity]"
+                      dataType="wstr"
+                      length="40"
+                      name="BillingCity" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingState]"
+                      dataType="wstr"
+                      length="40"
+                      name="BillingState" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingCountry]"
+                      dataType="wstr"
+                      length="40"
+                      name="BillingCountry" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[BillingPostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="BillingPostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input].ExternalColumns[Total]"
+                      dataType="numeric"
+                      name="Total"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extraer Data de Chinook\Stage_Invoice.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Invoice.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Invoice.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Invoice.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extraer Data de Chinook\Stage_InvoiceLine"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_InvoiceLine"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_InvoiceLine]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].Columns[InvoiceLineId]"
+                      cachedDataType="i4"
+                      cachedName="InvoiceLineId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[InvoiceLineId]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceLineId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].Columns[InvoiceId]"
+                      cachedDataType="i4"
+                      cachedName="InvoiceId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[InvoiceId]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[InvoiceId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].Columns[TrackId]"
+                      cachedDataType="i4"
+                      cachedName="TrackId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[TrackId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                      cachedDataType="numeric"
+                      cachedName="UnitPrice"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].Columns[Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Quantity"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      lineageId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output].Columns[Quantity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[InvoiceLineId]"
+                      dataType="i4"
+                      name="InvoiceLineId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[InvoiceId]"
+                      dataType="i4"
+                      name="InvoiceId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      dataType="i4"
+                      name="TrackId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      dataType="numeric"
+                      name="UnitPrice"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extraer Data de Chinook\Stage_MediaType"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_MediaType"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_MediaType]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extraer Data de Chinook\Stage_MediaType.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extraer Data de Chinook\Stage_MediaType.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_MediaType.Inputs[OLE DB Destination Input].Columns[MediaTypeId]"
+                      cachedDataType="i4"
+                      cachedName="MediaTypeId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_MediaType.Inputs[OLE DB Destination Input].ExternalColumns[MediaTypeId]"
+                      lineageId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].Columns[MediaTypeId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_MediaType.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="120"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_MediaType.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output].Columns[Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_MediaType.Inputs[OLE DB Destination Input].ExternalColumns[MediaTypeId]"
+                      dataType="i4"
+                      name="MediaTypeId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_MediaType.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="120"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extraer Data de Chinook\Stage_MediaType.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extraer Data de Chinook\Stage_MediaType.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_MediaType.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_MediaType.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_MediaType.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_MediaType.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extraer Data de Chinook\Stage_Track"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Stage_Track"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_Track]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extraer Data de Chinook\Stage_Track.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].Columns[TrackId]"
+                      cachedDataType="i4"
+                      cachedName="TrackId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[TrackId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].Columns[AlbumId]"
+                      cachedDataType="i4"
+                      cachedName="AlbumId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[AlbumId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[AlbumId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].Columns[MediaTypeId]"
+                      cachedDataType="i4"
+                      cachedName="MediaTypeId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[MediaTypeId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[MediaTypeId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].Columns[GenreId]"
+                      cachedDataType="i4"
+                      cachedName="GenreId"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[GenreId]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[GenreId]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].Columns[Composer]"
+                      cachedDataType="wstr"
+                      cachedLength="220"
+                      cachedName="Composer"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[Composer]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Composer]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].Columns[Milliseconds]"
+                      cachedDataType="i4"
+                      cachedName="Milliseconds"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[Milliseconds]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Milliseconds]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].Columns[Bytes]"
+                      cachedDataType="i4"
+                      cachedName="Bytes"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[Bytes]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[Bytes]" />
+                    <inputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                      cachedDataType="numeric"
+                      cachedName="UnitPrice"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output].Columns[UnitPrice]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[TrackId]"
+                      dataType="i4"
+                      name="TrackId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="200"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[AlbumId]"
+                      dataType="i4"
+                      name="AlbumId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[MediaTypeId]"
+                      dataType="i4"
+                      name="MediaTypeId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[GenreId]"
+                      dataType="i4"
+                      name="GenreId" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[Composer]"
+                      dataType="wstr"
+                      length="220"
+                      name="Composer" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[Milliseconds]"
+                      dataType="i4"
+                      name="Milliseconds" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[Bytes]"
+                      dataType="i4"
+                      name="Bytes" />
+                    <externalMetadataColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input].ExternalColumns[UnitPrice]"
+                      dataType="numeric"
+                      name="UnitPrice"
+                      precision="10"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extraer Data de Chinook\Stage_Track.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Track.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extraer Data de Chinook\Stage_Track.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extraer Data de Chinook\Stage_Track.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Extraer Data de Chinook\Track"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -1649,6 +2996,48 @@
               </outputs>
             </component>
           </components>
+          <paths>
+            <path
+              refId="Package\Extraer Data de Chinook.Paths[OLE DB Source Output]"
+              endId="Package\Extraer Data de Chinook\Stage_Invoice.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extraer Data de Chinook\Invoice.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extraer Data de Chinook.Paths[OLE DB Source Output1]"
+              endId="Package\Extraer Data de Chinook\Stage_InvoiceLine.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extraer Data de Chinook\InvoiceLine.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extraer Data de Chinook.Paths[OLE DB Source Output2]"
+              endId="Package\Extraer Data de Chinook\Stage_Customer.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extraer Data de Chinook\Customer.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extraer Data de Chinook.Paths[OLE DB Source Output3]"
+              endId="Package\Extraer Data de Chinook\Stage_Track.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extraer Data de Chinook\Track.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extraer Data de Chinook.Paths[OLE DB Source Output4]"
+              endId="Package\Extraer Data de Chinook\Stage_Album.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extraer Data de Chinook\Album.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extraer Data de Chinook.Paths[OLE DB Source Output5]"
+              endId="Package\Extraer Data de Chinook\Stage_Artist.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extraer Data de Chinook\Artist.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extraer Data de Chinook.Paths[OLE DB Source Output6]"
+              endId="Package\Extraer Data de Chinook\Stage_Genre.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extraer Data de Chinook\Genre.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Extraer Data de Chinook.Paths[OLE DB Source Output7]"
+              endId="Package\Extraer Data de Chinook\Stage_MediaType.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extraer Data de Chinook\MediaType.Outputs[OLE DB Source Output]" />
+          </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1676,39 +3065,247 @@
     design-time-name="Package\Extraer Data de Chinook">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="111.2,41.6"
           Id="Package\Extraer Data de Chinook\Invoice"
-          TopLeft="17.9999997317791,43.9999993443489" />
+          TopLeft="66.9999990016222,43.9999993443489" />
         <NodeLayout
           Size="131.2,41.6"
           Id="Package\Extraer Data de Chinook\InvoiceLine"
-          TopLeft="143.999997854233,43.9999993443489" />
+          TopLeft="68.9999989718198,131.999998033047" />
         <NodeLayout
           Size="123.2,41.6"
           Id="Package\Extraer Data de Chinook\Customer"
-          TopLeft="288.999995693564,42.9999993592501" />
+          TopLeft="67.999998986721,228.999996587634" />
         <NodeLayout
           Size="104.8,41.6"
           Id="Package\Extraer Data de Chinook\Track"
-          TopLeft="422.999993696809,43.9999993443489" />
+          TopLeft="70.9999989420176,317.999995261431" />
         <NodeLayout
           Size="108,41.6"
           Id="Package\Extraer Data de Chinook\Album"
-          TopLeft="537.999991983176,43.9999993443489" />
+          TopLeft="586.999991253019,43.9999993443489" />
         <NodeLayout
           Size="102.4,41.6"
           Id="Package\Extraer Data de Chinook\Artist"
-          TopLeft="654.99999023974,43.9999993443489" />
+          TopLeft="585.99999126792,131.999998033047" />
         <NodeLayout
           Size="107.2,41.6"
           Id="Package\Extraer Data de Chinook\Genre"
-          TopLeft="767.999988555908,45.9999993145466" />
+          TopLeft="586.999991253019,228.999996587634" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Extraer Data de Chinook\MediaType"
-          TopLeft="886.99998678267,45.9999995529651" />
+          TopLeft="587.999991238117,315.999995529652" />
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\Extraer Data de Chinook\Stage_Invoice"
+          TopLeft="300.999995514751,44.9999993294478" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\Extraer Data de Chinook\Stage_InvoiceLine"
+          TopLeft="303.999995470047,134.999997988343" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Extraer Data de Chinook\Stage_Customer"
+          TopLeft="311.999995350838,225.799996647239" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Extraer Data de Chinook\Stage_Track"
+          TopLeft="309.99999538064,314.799995321035" />
+        <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\Extraer Data de Chinook\Stage_Album"
+          TopLeft="839.999987483025,44.7999993443488" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\Extraer Data de Chinook\Stage_Artist"
+          TopLeft="844.999987408519,137.799997958541" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Extraer Data de Chinook\Stage_Genre"
+          TopLeft="846.999987378716,229.799996587634" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\Extraer Data de Chinook\Stage_MediaType"
+          TopLeft="844.999987408519,311.799995365739" />
+        <EdgeLayout
+          Id="Package\Extraer Data de Chinook.Paths[OLE DB Source Output]"
+          TopLeft="178.199999001622,65.2999993368984">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122.799996513128,0"
+              Start="0,0"
+              End="115.299996513128,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="115.299996513128,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer Data de Chinook.Paths[OLE DB Source Output1]"
+          TopLeft="200.19999897182,154.299998010695">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="103.799996498227,0"
+              Start="0,0"
+              End="96.2999964982272,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="96.2999964982272,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer Data de Chinook.Paths[OLE DB Source Output2]"
+          TopLeft="191.199998986721,248.199996617437">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120.799996364117,0"
+              Start="0,0"
+              End="113.299996364117,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="113.299996364117,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer Data de Chinook.Paths[OLE DB Source Output3]"
+          TopLeft="175.799998942018,337.199995291233">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="134.199996438622,0"
+              Start="0,0"
+              End="126.699996438622,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="126.699996438622,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer Data de Chinook.Paths[OLE DB Source Output4]"
+          TopLeft="694.999991253019,65.1999993443489">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="144.999996230006,0"
+              Start="0,0"
+              End="137.499996230006,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="137.499996230006,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer Data de Chinook.Paths[OLE DB Source Output5]"
+          TopLeft="688.39999126792,155.699997995794">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="156.599996140599,0"
+              Start="0,0"
+              End="149.099996140599,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="149.099996140599,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer Data de Chinook.Paths[OLE DB Source Output6]"
+          TopLeft="694.199991253019,250.199996587634">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.799996125697,0"
+              Start="0,0"
+              End="145.299996125697,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="145.299996125697,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Extraer Data de Chinook.Paths[OLE DB Source Output7]"
+          TopLeft="717.599991238117,334.699995447695">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="127.399996170401,0"
+              Start="0,0"
+              End="119.899996170401,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="119.899996170401,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -1805,6 +3402,110 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Extraer Data de Chinook\MediaType">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extraer Data de Chinook\Stage_Invoice">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extraer Data de Chinook\Stage_InvoiceLine">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extraer Data de Chinook\Stage_Customer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extraer Data de Chinook\Stage_Track">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extraer Data de Chinook\Stage_Album">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extraer Data de Chinook\Stage_Artist">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extraer Data de Chinook\Stage_Genre">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extraer Data de Chinook\Stage_MediaType">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
