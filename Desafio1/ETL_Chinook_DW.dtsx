@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{55C96BC4-CBC4-44DF-8215-852E7A1664E8}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{168F6A39-7959-4FD8-9C2F-87873B250DD7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ChinookDW;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{92301FF5-73A0-4F9F-8649-6FD1605BAC3E}localhost.ChinookDW.sa;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=ChinookDW;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package1-{92301FF5-73A0-4F9F-8649-6FD1605BAC3E}localhost.ChinookDW.sa;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA1HP5bUYg+/f2W9FBf8NZ1oii0A3eCzgqkmInAnHkEIwAAAAAOgAAAAAIAACAAAAAMNSlFl8GZxMxX1ZEM9Emoi5hnWW1aWjBg5V0JUR95vCAAAADAHz8SFSMcaPHafu0WMYF7s2Vl9KRmxnBmY7hlpHtxy0AAAAAWOcdkwZHk8l3KPMXqTIWVMgC5uV29ldMZIxceUzB7jqJRSeWh4najotBSrxgyp1VPwsXDWrdyJT84LC48HeHs</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABLgpUV/NbHGGOxvtq2JPITbN2ZYvLPdhTaOj6j2wUvAQAAAAAOgAAAAAIAACAAAACLIKpQfpb7SgH7RV4Rw2pCis6IdNLaCeljwWwLRoexrCAAAAAcrEgnJ17jgYlT/YS0cuKE7IwWTGJFN14DdVzLo7A6N0AAAAB6P3+qSPKYVC9KWxiOvOs11/WiBRRRdgvKV4fGwZUYY7ma+OQUurSzDfH40d9CIWwOB+HfxY7nU9zocyc69mSu</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,11 +42,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=Chinook_Staging;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package1-{E15A8233-66A9-4C41-85EA-FBC7F4BFC52A}localhost.Chinook_Staging.sa;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=Chinook_Staging;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package1-{E15A8233-66A9-4C41-85EA-FBC7F4BFC52A}localhost.Chinook_Staging.sa;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACgJHNpSYA45B24TfCB9zg7rv42XUshp+Lh8eo+ehbq8AAAAAAOgAAAAAIAACAAAAAPV5GW89cM6+6EL+7wZQ8cuzjNXcNNN8NwQSfXdcyR7iAAAAAZm3CxWebYoMp+OrGtPsmaP3AhUUKh76XS22NtbYIGAkAAAACn+wUZfrdTHbskvPHybva5LC6PlpJ72rIqxgFaJEMLxlm9kKbAxwr1qr7jQ+I+iKsc8fvskSZ80eY7EqcUrSpW</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADPMWNk/P5mDfyrZGRiB6SiXqiZcStUtz8mRp3QNMMNowAAAAAOgAAAAAIAACAAAAAPxSTkwwMxNid8JqcVIXD2HWF+Dp5ahPHDENRmNzBPlyAAAAAI/+z+oBQMQ6LwxlC34vMvVH6KOFLBgGP9rC2NT/QSBkAAAABSrwcvjfRhTi6S1s/OMk+9RjAvrmVmsJi0YQbf4yinE2EqCQYPo+CYL6RuQu8lXrv3qWJbehyWkDMPuPl2feRX</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -5776,17 +5776,21 @@ where [refTable].[TrackId] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="168,41.6"
-          Id="Package\DFT_DimCustomer"
-          TopLeft="55.8333302827347,23.3999998372793" />
+          Size="152.8,41.6"
+          Id="Package\DFT_DimAlbum"
+          TopLeft="474.166640759343,16.4666665521595" />
         <NodeLayout
           Size="146.4,41.6"
           Id="Package\DFT_DimArtist"
           TopLeft="274.999984974663,21.6666665159994" />
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\DFT_DimAlbum"
-          TopLeft="474.166640759343,16.4666665521595" />
+          Size="168,41.6"
+          Id="Package\DFT_DimCustomer"
+          TopLeft="55.8333302827347,23.3999998372793" />
+        <NodeLayout
+          Size="144.8,41.6"
+          Id="Package\DFT_DimDate"
+          TopLeft="482.499973637363,180.266665413115" />
         <NodeLayout
           Size="152,41.6"
           Id="Package\DFT_DimGenre"
@@ -5799,10 +5803,6 @@ where [refTable].[TrackId] = ?</property>
           Size="148.8,41.6"
           Id="Package\DFT_DimTrack"
           TopLeft="274.999984974663,181.999998734395" />
-        <NodeLayout
-          Size="144.8,41.6"
-          Id="Package\DFT_DimDate"
-          TopLeft="482.499973637363,180.266665413115" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\DFT_FactSales"
@@ -5977,144 +5977,6 @@ where [refTable].[TrackId] = ?</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\DFT_DimCustomer">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\DFT_DimCustomer\Stage_Customer"
-          TopLeft="65.8333297363588,38.9999997287989" />
-        <NodeLayout
-          Size="142.4,41.6"
-          Id="Package\DFT_DimCustomer\DimCustomer"
-          TopLeft="323.33331566718,232.266665051513" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\DFT_DimCustomer\Derived Column"
-          TopLeft="182.49999002864,145.599998987516" />
-        <EdgeLayout
-          Id="Package\DFT_DimCustomer.Paths[OLE DB Source Output]"
-          TopLeft="143.833329736359,80.5999997287988">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="115.066660292281,64.999999258717"
-              Start="0,0"
-              End="115.066660292281,57.499999258717">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.4999996293585" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.4999996293585"
-                    Point2="0,32.4999996293585"
-                    Point3="4,32.4999996293585" />
-                  <mssgle:LineSegment
-                    End="111.066660292281,32.4999996293585" />
-                  <mssgle:CubicBezierSegment
-                    Point1="111.066660292281,32.4999996293585"
-                    Point2="115.066660292281,32.4999996293585"
-                    Point3="115.066660292281,36.4999996293585" />
-                  <mssgle:LineSegment
-                    End="115.066660292281,57.499999258717" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_DimCustomer.Paths[Derived Column Output]"
-          TopLeft="258.89999002864,187.199998987516">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="135.63332563854,45.0666660639975"
-              Start="0,0"
-              End="135.63332563854,37.5666660639975">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5333330319988" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5333330319988"
-                    Point2="0,22.5333330319988"
-                    Point3="4,22.5333330319988" />
-                  <mssgle:LineSegment
-                    End="131.63332563854,22.5333330319988" />
-                  <mssgle:CubicBezierSegment
-                    Point1="131.63332563854,22.5333330319988"
-                    Point2="135.63332563854,22.5333330319988"
-                    Point3="135.63332563854,26.5333330319988" />
-                  <mssgle:LineSegment
-                    End="135.63332563854,37.5666660639975" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\DFT_DimArtist">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="135.2,41.6"
-          Id="Package\DFT_DimArtist\Stage_Artist"
-          TopLeft="78.9999988228083,36.999999448657" />
-        <NodeLayout
-          Size="120.8,41.6"
-          Id="Package\DFT_DimArtist\DimArtist"
-          TopLeft="281.999995797872,132.999998018146" />
-        <EdgeLayout
-          Id="Package\DFT_DimArtist.Paths[OLE DB Source Output]"
-          TopLeft="146.599998822808,78.599999448657">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="195.799996975064,54.3999985694886"
-              Start="0,0"
-              End="195.799996975064,46.8999985694886">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.1999992847443" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.1999992847443"
-                    Point2="0,27.1999992847443"
-                    Point3="4,27.1999992847443" />
-                  <mssgle:LineSegment
-                    End="191.799996975064,27.1999992847443" />
-                  <mssgle:CubicBezierSegment
-                    Point1="191.799996975064,27.1999992847443"
-                    Point2="195.799996975064,27.1999992847443"
-                    Point3="195.799996975064,31.1999992847443" />
-                  <mssgle:LineSegment
-                    End="195.799996975064,46.8999985694886" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
     design-time-name="Package\DFT_DimAlbum">
     <LayoutInfo>
       <GraphLayout
@@ -6204,6 +6066,397 @@ where [refTable].[TrackId] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAlbum\Stage_Album">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAlbum\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimArtist]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAlbum\DimAlbum">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_DimArtist">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\DFT_DimArtist\Stage_Artist"
+          TopLeft="78.9999988228083,36.999999448657" />
+        <NodeLayout
+          Size="120.8,41.6"
+          Id="Package\DFT_DimArtist\DimArtist"
+          TopLeft="281.999995797872,132.999998018146" />
+        <EdgeLayout
+          Id="Package\DFT_DimArtist.Paths[OLE DB Source Output]"
+          TopLeft="146.599998822808,78.599999448657">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="195.799996975064,54.3999985694886"
+              Start="0,0"
+              End="195.799996975064,46.8999985694886">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.1999992847443" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.1999992847443"
+                    Point2="0,27.1999992847443"
+                    Point3="4,27.1999992847443" />
+                  <mssgle:LineSegment
+                    End="191.799996975064,27.1999992847443" />
+                  <mssgle:CubicBezierSegment
+                    Point1="191.799996975064,27.1999992847443"
+                    Point2="195.799996975064,27.1999992847443"
+                    Point3="195.799996975064,31.1999992847443" />
+                  <mssgle:LineSegment
+                    End="195.799996975064,46.8999985694886" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimArtist\DimArtist">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimArtist\Stage_Artist">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_DimCustomer">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DFT_DimCustomer\Stage_Customer"
+          TopLeft="65.8333297363588,38.9999997287989" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\DFT_DimCustomer\DimCustomer"
+          TopLeft="323.33331566718,232.266665051513" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DFT_DimCustomer\Derived Column"
+          TopLeft="182.49999002864,145.599998987516" />
+        <EdgeLayout
+          Id="Package\DFT_DimCustomer.Paths[OLE DB Source Output]"
+          TopLeft="143.833329736359,80.5999997287988">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115.066660292281,64.999999258717"
+              Start="0,0"
+              End="115.066660292281,57.499999258717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.4999996293585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.4999996293585"
+                    Point2="0,32.4999996293585"
+                    Point3="4,32.4999996293585" />
+                  <mssgle:LineSegment
+                    End="111.066660292281,32.4999996293585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="111.066660292281,32.4999996293585"
+                    Point2="115.066660292281,32.4999996293585"
+                    Point3="115.066660292281,36.4999996293585" />
+                  <mssgle:LineSegment
+                    End="115.066660292281,57.499999258717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimCustomer.Paths[Derived Column Output]"
+          TopLeft="258.89999002864,187.199998987516">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="135.63332563854,45.0666660639975"
+              Start="0,0"
+              End="135.63332563854,37.5666660639975">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5333330319988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5333330319988"
+                    Point2="0,22.5333330319988"
+                    Point3="4,22.5333330319988" />
+                  <mssgle:LineSegment
+                    End="131.63332563854,22.5333330319988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="131.63332563854,22.5333330319988"
+                    Point2="135.63332563854,22.5333330319988"
+                    Point3="135.63332563854,26.5333330319988" />
+                  <mssgle:LineSegment
+                    End="135.63332563854,37.5666660639975" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimCustomer\Stage_Customer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimCustomer\DimCustomer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_DimDate">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\DFT_DimDate\Stage_Invoice"
+          TopLeft="114.999998286366,56.9999991506338" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\DFT_DimDate\DimDate"
+          TopLeft="321.999995201826,301.999995499849" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DFT_DimDate\Derived Column"
+          TopLeft="233.999996513128,223.99999666214" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\DFT_DimDate\Sort"
+          TopLeft="198.999997034669,140.999997898936" />
+        <EdgeLayout
+          Id="Package\DFT_DimDate.Paths[OLE DB Source Output]"
+          TopLeft="186.999998286366,98.5999991506338">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.7999987483025,42.3999987483024"
+              Start="0,0"
+              End="60.7999987483025,34.8999987483024">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.1999993741512" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.1999993741512"
+                    Point2="0,21.1999993741512"
+                    Point3="4,21.1999993741512" />
+                  <mssgle:LineSegment
+                    End="56.7999987483025,21.1999993741512" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56.7999987483025,21.1999993741512"
+                    Point2="60.7999987483025,21.1999993741512"
+                    Point3="60.7999987483025,25.1999993741512" />
+                  <mssgle:LineSegment
+                    End="60.7999987483025,34.8999987483024" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimDate.Paths[Sort Output]"
+          TopLeft="247.799997034669,182.599997898936">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="62.5999994784594,41.3999987632036"
+              Start="0,0"
+              End="62.5999994784594,33.8999987632036">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.6999993816018" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.6999993816018"
+                    Point2="0,20.6999993816018"
+                    Point3="4,20.6999993816018" />
+                  <mssgle:LineSegment
+                    End="58.5999994784594,20.6999993816018" />
+                  <mssgle:CubicBezierSegment
+                    Point1="58.5999994784594,20.6999993816018"
+                    Point2="62.5999994784594,20.6999993816018"
+                    Point3="62.5999994784594,24.6999993816018" />
+                  <mssgle:LineSegment
+                    End="62.5999994784594,33.8999987632036" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimDate.Paths[Derived Column Output]"
+          TopLeft="310.399996513128,265.59999666214">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.1999986886979,36.3999988377094"
+              Start="0,0"
+              End="71.1999986886979,28.8999988377094">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.1999994188547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.1999994188547"
+                    Point2="0,18.1999994188547"
+                    Point3="4,18.1999994188547" />
+                  <mssgle:LineSegment
+                    End="67.1999986886979,18.1999994188547" />
+                  <mssgle:CubicBezierSegment
+                    Point1="67.1999986886979,18.1999994188547"
+                    Point2="71.1999986886979,18.1999994188547"
+                    Point3="71.1999986886979,22.1999994188547" />
+                  <mssgle:LineSegment
+                    End="71.1999986886979,28.8999988377094" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimDate\Stage_Invoice">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimDate\DimDate">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT_DimGenre">
     <LayoutInfo>
@@ -6254,6 +6507,32 @@ where [refTable].[TrackId] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimGenre\DimGenre">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimGenre\Stage_Genre">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT_DimMediaType">
     <LayoutInfo>
@@ -6304,6 +6583,32 @@ where [refTable].[TrackId] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimMediaType\DimMediaType">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimMediaType\Stage_MediaType">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT_DimTrack">
     <LayoutInfo>
@@ -6474,132 +6779,101 @@ where [refTable].[TrackId] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <TaskHost
-    design-time-name="Package\DFT_DimDate">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="144,41.6"
-          Id="Package\DFT_DimDate\Stage_Invoice"
-          TopLeft="114.999998286366,56.9999991506338" />
-        <NodeLayout
-          Size="119.2,41.6"
-          Id="Package\DFT_DimDate\DimDate"
-          TopLeft="321.999995201826,301.999995499849" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\DFT_DimDate\Derived Column"
-          TopLeft="233.999996513128,223.99999666214" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\DFT_DimDate\Sort"
-          TopLeft="198.999997034669,140.999997898936" />
-        <EdgeLayout
-          Id="Package\DFT_DimDate.Paths[OLE DB Source Output]"
-          TopLeft="186.999998286366,98.5999991506338">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="60.7999987483025,42.3999987483024"
-              Start="0,0"
-              End="60.7999987483025,34.8999987483024">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.1999993741512" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.1999993741512"
-                    Point2="0,21.1999993741512"
-                    Point3="4,21.1999993741512" />
-                  <mssgle:LineSegment
-                    End="56.7999987483025,21.1999993741512" />
-                  <mssgle:CubicBezierSegment
-                    Point1="56.7999987483025,21.1999993741512"
-                    Point2="60.7999987483025,21.1999993741512"
-                    Point3="60.7999987483025,25.1999993741512" />
-                  <mssgle:LineSegment
-                    End="60.7999987483025,34.8999987483024" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_DimDate.Paths[Sort Output]"
-          TopLeft="247.799997034669,182.599997898936">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="62.5999994784594,41.3999987632036"
-              Start="0,0"
-              End="62.5999994784594,33.8999987632036">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.6999993816018" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.6999993816018"
-                    Point2="0,20.6999993816018"
-                    Point3="4,20.6999993816018" />
-                  <mssgle:LineSegment
-                    End="58.5999994784594,20.6999993816018" />
-                  <mssgle:CubicBezierSegment
-                    Point1="58.5999994784594,20.6999993816018"
-                    Point2="62.5999994784594,20.6999993816018"
-                    Point3="62.5999994784594,24.6999993816018" />
-                  <mssgle:LineSegment
-                    End="62.5999994784594,33.8999987632036" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_DimDate.Paths[Derived Column Output]"
-          TopLeft="310.399996513128,265.59999666214">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="71.1999986886979,36.3999988377094"
-              Start="0,0"
-              End="71.1999986886979,28.8999988377094">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.1999994188547" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.1999994188547"
-                    Point2="0,18.1999994188547"
-                    Point3="4,18.1999994188547" />
-                  <mssgle:LineSegment
-                    End="67.1999986886979,18.1999994188547" />
-                  <mssgle:CubicBezierSegment
-                    Point1="67.1999986886979,18.1999994188547"
-                    Point2="71.1999986886979,18.1999994188547"
-                    Point3="71.1999986886979,22.1999994188547" />
-                  <mssgle:LineSegment
-                    End="71.1999986886979,28.8999988377094" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\Lookup MediaType">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimMediaType]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\Lookup Album">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAlbum]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\DimTrack">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\Stage_Track">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimTrack\Lookup Genre">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimGenre]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT_FactSales">
     <LayoutInfo>
@@ -6903,289 +7177,25 @@ where [refTable].[TrackId] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimCustomer\Stage_Customer">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimCustomer\DimCustomer">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimArtist\Stage_Artist">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimArtist\DimArtist">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAlbum\Stage_Album">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAlbum\DimAlbum">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAlbum\Lookup">
+    design-time-name="Package\DFT_FactSales\Lookup Date">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimArtist]</Value>
+          type="q3:string">[dbo].[DimDate]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimGenre\Stage_Genre">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimGenre\DimGenre">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimMediaType\Stage_MediaType">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimMediaType\DimMediaType">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimTrack\Stage_Track">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimTrack\DimTrack">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimTrack\Lookup Album">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimAlbum]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimTrack\Lookup Genre">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimGenre]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimTrack\Lookup MediaType">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimMediaType]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimDate\Stage_Invoice">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimDate\DimDate">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_FactSales\Stage_Invoice">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -7221,7 +7231,7 @@ where [refTable].[TrackId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7231,7 +7241,7 @@ where [refTable].[TrackId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7244,7 +7254,7 @@ where [refTable].[TrackId] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -7254,7 +7264,7 @@ where [refTable].[TrackId] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7262,25 +7272,15 @@ where [refTable].[TrackId] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_FactSales\Lookup Date">
+    design-time-name="Package\DFT_FactSales\Stage_Invoice">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
