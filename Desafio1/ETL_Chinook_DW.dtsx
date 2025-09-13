@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{3013B1C4-CCC8-43ED-9C85-534BDCF44ADE}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{13369300-4C46-4D79-A753-D5B54339F7A8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADURIDCAhwAQEAjgLb0j0EefGmbBpI5Doiv4JaKPfRkpwAAAAAOgAAAAAIAACAAAABJ1cNm/2e+t3SsXWCQ65QGKEb7zwwf/DS48jLr9SPyhCAAAAAreaIZ1jzsxFmwiYYLblSj+wKmF+MLIF9guPyd7jGnmkAAAAC7m+Y6DcSBzbhZK3mvxUHMQUQk9CS7Iu95OvAR9ljBnXrf9hKHSUQiIoZVt1qeCvHCFHHYMbQbkGkNSPUYMJa5</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACCzb8q+FjhLoDcUpb8CxfhtFgO4fCmoAZ/frnWk966JgAAAAAOgAAAAAIAACAAAABZKueq6Rr5HFTQPsBanJ9uK3p55E8/2JEgkRQA/l4ebCAAAAA7wsBaNWeISDhnwJpvpgc4f1zc5VqlNSwI+B7EDUatZEAAAAA0uVDi4trW+RPFspBf3RLEjKRrDbpw6rylGVM/anBwFRzDLx+YYi36YQo5fUtgzqpVL4aDwDP5XvlySfLbA2dh</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -46,7 +46,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABTD4et5W/cZUUFzUXiPcpL+w4+OpCcfzjF2y4z+4R7IgAAAAAOgAAAAAIAACAAAABMYJOyApx7+61EHksjcLoMkyc/SDJ+OpJVinhfpJkMHCAAAAApcUo3u2jFqjnyBIWsUDcFR6X8G4dfWzNEzRq8Acy8M0AAAACsDAdJXoP5yP76z0wrp4RvJqHntaQ4/OKfpwyZ/bUDBetngYWUE3VoV429oxQ8Z/eqFy3gIC85GsRU5Toq/mI7</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuPW5v3MamkiYE1cnvDmWWwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADH4EHD7ujqyi6KUs4uEgEwYIb4+d8+EWwZa5LG63AmzwAAAAAOgAAAAAIAACAAAACe1yPdBS2ubotYO1xh1ybt1N3XJAKH0bLMVNlYDqT7sSAAAAChoW64Vb698fBz+SxiNxwg8lzPFFRvsBN+G1c/9dF7PUAAAAAgk0uxbgMflkikneRIqctGpl09gXJUBoHsYi8AXjdmfen3ggD4/X2sVU6bMDVCipJey240LaGZBbfiUa53pAcJ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1868,7 +1868,273 @@ where [refTable].[ArtistId] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <pipeline
-          version="1" />
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_DimMediaType\DimMediaType"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="DimMediaType"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimMediaType]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimMediaType\DimMediaType.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ChinookDW.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input].Columns[MediaTypeId]"
+                      cachedDataType="i4"
+                      cachedName="MediaTypeId"
+                      externalMetadataColumnId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input].ExternalColumns[MediaTypeId]"
+                      lineageId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].Columns[MediaTypeId]" />
+                    <inputColumn
+                      refId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="120"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].Columns[Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input].ExternalColumns[MediaTypeKey]"
+                      dataType="i4"
+                      name="MediaTypeKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input].ExternalColumns[MediaTypeId]"
+                      dataType="i4"
+                      name="MediaTypeId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="120"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimMediaType\DimMediaType.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimMediaType\DimMediaType.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimMediaType\DimMediaType.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimMediaType\DimMediaType.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimMediaType\DimMediaType.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimMediaType\Stage_MediaType"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Stage_MediaType"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[stg_MediaType]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimMediaType\Stage_MediaType.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.Chinook_Staging.sa]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
+                      lineageId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].Columns[MediaTypeId]"
+                      name="MediaTypeId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      length="120"
+                      lineageId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].ExternalColumns[MediaTypeId]"
+                      dataType="i4"
+                      name="MediaTypeId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="120"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Error Output].Columns[MediaTypeId]"
+                      name="MediaTypeId" />
+                    <outputColumn
+                      refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      dataType="wstr"
+                      length="120"
+                      lineageId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_DimMediaType.Paths[OLE DB Source Output]"
+              endId="Package\DFT_DimMediaType\DimMediaType.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_DimMediaType\Stage_MediaType.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2451,6 +2717,56 @@ where [refTable].[ArtistId] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <TaskHost
+    design-time-name="Package\DFT_DimMediaType">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\DFT_DimMediaType\Stage_MediaType"
+          TopLeft="81.9999987781048,48.9999992698431" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\DFT_DimMediaType\DimMediaType"
+          TopLeft="208.999996885657,155.999997675419" />
+        <EdgeLayout
+          Id="Package\DFT_DimMediaType.Paths[OLE DB Source Output]"
+          TopLeft="163.599998778105,90.5999992698431">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.799998107553,65.3999984055758"
+              Start="0,0"
+              End="119.799998107553,57.8999984055758">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.6999992027879" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.6999992027879"
+                    Point2="0,32.6999992027879"
+                    Point3="4,32.6999992027879" />
+                  <mssgle:LineSegment
+                    End="115.799998107553,32.6999992027879" />
+                  <mssgle:CubicBezierSegment
+                    Point1="115.799998107553,32.6999992027879"
+                    Point2="119.799998107553,32.6999992027879"
+                    Point3="119.799998107553,36.6999992027879" />
+                  <mssgle:LineSegment
+                    End="119.799998107553,57.8999984055758" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_DimCustomer\Stage_Customer">
     <Properties>
@@ -2567,6 +2883,32 @@ where [refTable].[ArtistId] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_DimGenre\DimGenre">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimMediaType\Stage_MediaType">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimMediaType\DimMediaType">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
